@@ -37,7 +37,7 @@
       z-index: 1000;
     }
 	
-    .nav-container {
+	.nav-container {
       max-width: 900px; 
       margin: 0 auto;
       position: relative;
@@ -46,17 +46,15 @@
       align-items: center;
     }
 	
-    .nav-logo {
-      position: absolute;
-      left: 20px; 
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--primary-color);
-      text-decoration: none;
-      margin-right: 0;
-      align-self: center;
-      top: 50%;
-      transform: translateY(-50%);
+	.nav-logo {
+	 position: fixed;
+	 left: 20px; 
+	 top: 10px;
+     font-weight: 700;
+     font-size: 1.25rem;
+     color: var(--primary-color);
+     text-decoration: none;
+     z-index: 1001;;
     }
 
     nav ul {
@@ -65,7 +63,7 @@
       list-style: none;
       display: flex;
       gap: 30px;
-      flex: 1;
+	  flex: 1;
       justify-content: center;
     }
 
@@ -214,8 +212,8 @@
 <body>
 
 <nav>
+  <a href="index.html" class="nav-logo">Amruta Gandhe</a>
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">Amruta Gandhe</a>
     <ul>
       <li>
         <a href="index.html">
@@ -267,7 +265,6 @@
     </ul>
   </div>
 </nav>
-
 
 <main>
   <img src="assets/profile.jpg" alt="Amruta Gandhe" class="profile-pic" />
