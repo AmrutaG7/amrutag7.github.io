@@ -249,6 +249,19 @@ h4 {
   vertical-align: middle;
 }
 
+/* Container for navbar and footer to align with main content */
+#navbar-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   nav {
@@ -267,3 +280,4 @@ h4 {
     padding: 0 1rem;
   }
 }
+
