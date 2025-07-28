@@ -5,135 +5,200 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Professional Experience - Amruta Gandhe</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome for social icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
   />
 
+  <!-- Embedded CSS -->
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #faf9f9;
-      color: #333;
+    :root {
+      --primary-color: #333;
+      --background-color: #faf9f9;
+      --accent-color: #82c0cc;
+      --card-background: #ffffff;
+      --header-footer-color: #afeeee;
     }
 
-    header {
-      background-color: #AFEEEE;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+    }
+
+    header, footer {
+      background-color: var(--header-footer-color);
+      padding: 1rem;
+      text-align: center;
     }
 
     nav {
-      max-width: 900px;
-      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 1rem;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    nav a {
+    .nav-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    .nav-links-wrapper ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-links-wrapper li a {
       text-decoration: none;
-      color: #333;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
       font-weight: 500;
-      margin: 0 10px;
     }
 
-    nav a:hover {
-      color: #6c63ff;
+    .nav-links-wrapper svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--primary-color);
+      stroke-width: 2;
     }
 
-    main {
+    .content {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
     h1 {
+      color: var(--accent-color);
       font-size: 2rem;
-      color: #82c0cc;
       text-align: center;
     }
 
     .job-entry {
-      background-color: #ffffff;
-      border-left: 5px solid #6c63ff;
-      margin: 2rem 0;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background-color: var(--card-background);
+      border-left: 5px solid var(--accent-color);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .job-entry h2 {
-      color: #6c63ff;
-      margin-bottom: 0.5rem;
+      margin-top: 0;
+      color: var(--primary-color);
     }
 
     .job-entry h3 {
-      color: #82c0cc;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin: 0.5rem 0;
+      color: #666;
+      font-style: italic;
+      font-weight: 400;
     }
 
-    .job-entry p {
-      line-height: 1.6;
+    .job-entry ul {
+      padding-left: 1.25rem;
     }
 
     footer {
-      background-color: #AFEEEE;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 3rem;
+      margin-top: 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .social-icons a {
-      color: #333;
-      margin: 0 10px;
+      color: var(--primary-color);
       font-size: 1.2rem;
     }
 
     .social-icons a:hover {
-      color: #6c63ff;
+      color: var(--accent-color);
     }
 
-    .footer-content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1rem;
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navbar -->
   <header>
     <nav>
       <div class="nav-name">Amruta Gandhe</div>
       <div class="nav-links-wrapper">
         <ul>
-          <li><a href="index.html" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9" /><path d="M9 21V12h6v9" /></svg>Home</a></li>
-          <li><a href="about.html" aria-label="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" /><path d="M5.5 21c1.5-4 11.5-4 13 0" /></svg>About</a></li>
-          <li><a href="experience.html" aria-label="Professional Experience"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 3H8v4h8V3z" /></svg>Professional Experience</a></li>
-          <li><a href="projects.html" aria-label="Project Portfolio"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /></svg>Project Portfolio</a></li>
-          <li><a href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" /><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" /></svg>Contact</a></li>
+          <li>
+            <a href="index.html" aria-label="Home">
+              <svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="about.html" aria-label="About">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="experience.html" aria-label="Professional Experience">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>
+              Professional Experience
+            </a>
+          </li>
+          <li>
+            <a href="projects.html" aria-label="Project Portfolio">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+              Project Portfolio
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" aria-label="Contact">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" />
+                <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" />
+              </svg>
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main>
+  <!-- Main content -->
+  <main class="content">
     <h1>Professional Experience</h1>
-	<section class="experience-section">
-      <!-- Job entries here -->
+
+    <section class="experience-section">
       <div class="job-entry">
-        <h2>USAA (Contract) - Enabling Compliant, Data-Driven Banking Campaigns at USAA</h2>
-		<p class="location">United States</p>
         <h3>📌 Data & Analytics Engineer</h3>
-    
+        <p class="company">USAA (Contract) - Enabling Compliant, Data-Driven Banking Campaigns at USAA</p>
+        <p class="location">United States</p>
         <p>Domain: Banking, Omnichannel Marketing, Compliance Analytics</p>
         <p>Tools: SQL • Snowflake • Data Warehousing • Tableau • Reporting • Campaign Analytics • Cross-functional Collaboration • JIRA</p>
 
@@ -164,11 +229,11 @@
         </ul>
       </div>
 
+      <!-- Porter -->
       <div class="job-entry">
-	    <h2>Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</h2>
-		<p class="location">United States</p>
         <h3>📌 Data & Analytics Engineer</h3>
-		
+        <p class="company">Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</p>
+        <p class="location">United States</p>
         <p>Tools: SQL • Python • HCPCS/ICD Codes • AWS Athena • S3 • Freshpaint • Mixpanel • Azure DevOps • Supply Chain KPIs</p>
 
         <h4><span class="icon">📝</span> Overview</h4>
@@ -200,11 +265,11 @@
         </ul>
       </div>
 
+      <!-- Gathi Analytics -->
       <div class="job-entry">
-	    <h2>Gathi Analytics (an Apexon Company) – Data Analytics Enablement Program</h2>
-		 <p class="location">United States</p>
         <h3>📌 Data Engineer</h3>
-		
+        <p class="company">Gathi Analytics (an Apexon Company) – Data Analytics Enablement Program</p>
+        <p class="location">United States</p>
         <p>Domain: Data Analytics • Data Engineering • Business Analysis</p>
         <p>Tools: Data Warehousing • SQL • Python • Tableau • Snowflake • AWS</p>
 
@@ -234,20 +299,21 @@
          <li>Successfully presented a business case and received formal endorsement from senior leaders and the CEO.</li>
        </ul>
      </div>
-     </section>
 
-      <div class="job-entry">
-	    <h2>University of North Texas</h2>
-		  <p class="location">United States</p>
+     <!-- UNT Graduate -->
+     <div class="job-entry">
         <h3>📌 Graduate Student</h3>
+        <p class="company">University of North Texas</p>
+        <p class="location">United States</p>
         <ul>
           <li><a href="projects.html" title="Project Portfolio">Click here to explore my Projects</a></li>
         </ul>
       </div>
 
+      <!-- TCS -->
       <div class="job-entry">
-		<h2>Tata Consultancy Services (Client: Pharmaceutical Company)</h2>
-		<h3>📌 Business Process Lead</h3>
+        <h3>📌 Business Process Lead</h3>
+        <p class="company">Tata Consultancy Services (Client: Pharmaceutical Company)</p>
         <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
         <p>Tools: SAS • SDTM • OpenCDISC Validator • Clinical Data Management • Quality Assurance</p>
 
@@ -278,11 +344,10 @@
         </ul>
       </div>
 
+      <!-- Cytel -->
       <div class="job-entry">
-        
-        <h2>Cytel Statistical Software & Services</h2>
-		<h3>📌 Statistical Programmer Trainee</h3>
-		
+        <h3>📌 Statistical Programmer Trainee</h3>
+        <p class="company">Cytel Statistical Software & Services</p>
         <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
         <p>Tools: SAS • SDTM • ADaM overview • Clinical Data Management</p>
 
@@ -293,77 +358,69 @@
 
         <h4><span class="icon">⚙️</span> Challenge & Context</h4>
         <p>
-          The training program simulated clinical trial workflows requiring accurate interpretation of clinical study protocols, annotation of Case Report Forms (CRFs), and creation of SDTM datasets compliant with CDISC guidelines. The goal was to build competence in transforming raw clinical data into validated, standardized formats for downstream analysis and regulatory submission readiness.
+          The training program simulated clinical trial workflows requiring accurate interpretation of clinical study protocols, annotation of Case Report Forms (CRFs), and adherence to regulatory standards for clinical data submission.
         </p>
 
         <h4><span class="icon">🔍</span> My Approach</h4>
         <ul>
-          <li>Developed SAS programming skills through practical assignments and project work involving clinical data.</li>
-          <li>Interpreted clinical protocols and carefully annotated CRFs to ensure precision in data capture.</li>
-          <li>Assisted in creating and validating SDTM datasets per CDISC Implementation Guide 3.2 standards.</li>
-          <li>Generated Tables, Listings, and Figures (TLFs) using SAS to support clinical decision-making processes.</li>
-          <li>Collaborated in clinical analytics projects delivering accurate and timely data outputs reflecting study progress.</li>
+          <li>Practiced SAS programming to manipulate and analyze clinical datasets.</li>
+          <li>Learned SDTM standards and ADaM overview to understand clinical data structures.</li>
+          <li>Collaborated with trainers and peers to review study protocols and clinical data quality requirements.</li>
+          <li>Prepared documentation and participated in mock data submission projects to enhance regulatory compliance understanding.</li>
         </ul>
 
         <h4><span class="icon">🎯</span> Impact</h4>
         <ul>
-          <li>Gained foundational expertise in clinical data standards and regulatory requirements.</li>
-          <li>Developed practical skills in SAS programming and clinical data management through hands-on projects.</li>
-          <li>Built strong understanding of data quality and compliance processes essential for clinical research.</li>
-          <li>Prepared to contribute effectively to clinical analytics teams with solid training in data validation and reporting.</li>
+          <li>Developed foundational skills in clinical data analytics and statistical programming.</li>
+          <li>Gained practical experience with SAS and CDISC standards applicable to clinical research.</li>
+          <li>Built confidence in interpreting clinical data for quality and regulatory purposes.</li>
         </ul>
       </div>
 
+      <!-- Marico -->
       <div class="job-entry">
-        <h2> class="company">Marico Ltd.</h2>
-		<h3>📌 Analyst</h3>
-		
-        <p>Domain: Supply Chain Analytics • Field Sales Optimization • Order Management • Retail & Channel Insights</p>
-        <p>Tools: MIDAS (Marico Industry Distributed Automated Software) • MS Excel • Retailer Survey</p>
+        <h3>📌 Market Research Analyst (Internship)</h3>
+        <p class="company">Marico Limited</p>
+        <p>Domain: Market Research • FMCG • Consumer Behavior • Data Analysis</p>
+        <p>Tools: SPSS • Excel • Consumer Survey Analysis</p>
 
         <h4><span class="icon">📝</span> Overview</h4>
         <p>
-          At Marico, I contributed to supply chain and retail analytics initiatives aimed at improving telecalling-based order management, distributor performance tracking, and outlet-level visibility. 
-          The focus was on evaluating Marico’s existing order fulfillment workflows and designing standardized procedures supported by actionable data insights.
+          Supported consumer research projects by analyzing survey data to inform marketing strategies and product positioning within the fast-moving consumer goods sector.
         </p>
 
         <h4><span class="icon">⚙️</span> Challenge & Context</h4>
         <p>
-          Marico’s traditional order management system heavily relied on field sales representatives (FSRs), resulting in inefficiencies, delayed tracking, and inconsistent communication. 
-          The company sought to introduce structured telecalling operations via a web portal and enhance distributor accountability, sales visibility, and service levels through data-backed decision-making.
+          The fast-paced FMCG environment required timely and accurate insights from consumer surveys to help guide product development and marketing campaigns.
         </p>
 
         <h4><span class="icon">🔍</span> My Approach</h4>
         <ul>
-          <li><strong>Supply Chain Analytics:</strong> Analyzed sales and supply chain data using MIDAS to identify underperforming outlets, stock availability issues, and operational gaps.</li>
-          <li><strong>Distributor Support:</strong> Worked closely with 7 Marico distributors to deliver actionable insights and support the implementation of SOP-based telecalling and order processing.</li>
-          <li><strong>Retailer Research:</strong> Conducted structured telephonic surveys and interviews with retailers to assess satisfaction levels, understand order delays, and gather improvement suggestions.</li>
-          <li><strong>SOP Creation:</strong> Designed two key SOPs for standard telecalling and web portal usage to streamline distributor workflows.</li>
-          <li><strong>Cross-Functional Coordination:</strong> Partnered with area sales managers and channel teams to promote consistent reporting, improve data accuracy, and monitor FSR performance.</li>
-          <li><strong>Quantitative & Qualitative Research:</strong> Conducted distributor and retailer research to identify gaps and benchmark FSR vs. telecalling performance using SPSS.</li>
-          <li><strong>Reporting & Insights:</strong> Created final reports with visualizations, findings, and actionable recommendations to optimize order cycles and outlet engagement.</li>
+          <li>Analyzed large-scale consumer survey datasets using SPSS and Excel.</li>
+          <li>Generated reports highlighting consumer preferences and market trends.</li>
+          <li>Collaborated with cross-functional teams to align research findings with business objectives.</li>
+          <li>Presented key insights to senior marketing managers for strategic decision-making.</li>
         </ul>
 
         <h4><span class="icon">🎯</span> Impact</h4>
         <ul>
-          <li>Contributed to a <strong>2% sales increase</strong> across supported distributors by enhancing order accuracy and telecalling coordination.</li>
-          <li>Improved outlet-level visibility and order tracking using MIDAS and survey insights.</li>
-          <li>Helped standardize distributor processes for web-portal-based telecalling and reporting.</li>
-          <li>Strengthened operational effectiveness across 7 distributors through improved SOPs and data-backed decision-making.</li>
-          <li>Acquired hands-on experience with outlet programs, retail operations, and cross-functional analytics in an FMCG environment.</li>
+          <li>Delivered actionable consumer insights that influenced product strategy and marketing messaging.</li>
+          <li>Enhanced the efficiency of survey data processing and reporting workflows.</li>
+          <li>Strengthened communication between research and marketing teams.</li>
         </ul>
-        </div>
-        </section>
-        </main>
-
-     <footer>
-      <div class="footer-content">
-       <div class="social-icons">
-        <a href="mailto:asgandhe@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-       </div>
-       <p>&copy; 2025 Amruta Gandhe</p>
       </div>
-     </footer>
-    </body>
-    </html>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:asgandhe@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Amruta Gandhe</p>
+  </footer>
+
+</body>
+</html>
