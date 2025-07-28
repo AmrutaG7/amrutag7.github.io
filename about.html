@@ -35,8 +35,18 @@
       border-bottom: 1px solid var(--accent-color);
       padding: 10px 20px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+	  align-items: center;
       z-index: 1000;
+    }
+	
+	.nav-logo {
+     font-weight: 700;
+     font-size: 1.25rem;
+     color: var(--primary-color);
+     text-decoration: none;
+     margin-right: auto;
+     align-self: center;
     }
 
     nav ul {
@@ -192,6 +202,7 @@
 <body>
 
 <nav>
+  <a href="index.html" class="nav-logo">Amruta Gandhe</a>
   <ul>
     <li>
       <a href="index.html">
