@@ -173,6 +173,12 @@ footer .social-icons a:focus {
   outline: none;
 }
 
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* EXPERIENCE PAGE SPECIFIC */
 .job-entry {
   background-color: white;
