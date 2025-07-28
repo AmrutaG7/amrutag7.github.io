@@ -5,70 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Professional Experience - Amruta Gandhe</title>
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
 
   <style>
     body {
-      background-color: #faf9f9;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #faf9f9;
       color: #333;
     }
 
-    header, footer {
-      background-color: #afeeee;
-      color: #333;
+    header {
+      background-color: #AFEEEE;
       padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     nav {
+      max-width: 900px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
       padding: 0 1rem;
     }
 
-    .nav-name {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-links-wrapper ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-links-wrapper a {
+    nav a {
       text-decoration: none;
       color: #333;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: color 0.3s;
+      font-weight: 500;
+      margin: 0 10px;
     }
 
-    .nav-links-wrapper a:hover {
+    nav a:hover {
       color: #6c63ff;
-    }
-
-    .nav-links-wrapper svg {
-      width: 18px;
-      height: 18px;
-      stroke: #333;
-      fill: none;
-      stroke-width: 2;
     }
 
     main {
@@ -96,13 +72,12 @@
       color: #6c63ff;
       margin-bottom: 0.5rem;
     }
-	
-	.job-entry h3 {
+
+    .job-entry h3 {
       color: #82c0cc;
       font-size: 1.25rem;
       font-weight: 600;
-      margin-top: 1rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
 
     .job-entry p {
@@ -110,20 +85,16 @@
     }
 
     footer {
+      background-color: #AFEEEE;
       text-align: center;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 0.5rem 0;
+      padding: 1rem 0;
+      margin-top: 3rem;
     }
 
     .social-icons a {
       color: #333;
+      margin: 0 10px;
       font-size: 1.2rem;
-      transition: color 0.3s;
     }
 
     .social-icons a:hover {
@@ -159,9 +130,10 @@
 	<section class="experience-section">
       <!-- Job entries here -->
       <div class="job-entry">
+        <h2>USAA (Contract) - Enabling Compliant, Data-Driven Banking Campaigns at USAA</h2>
+		<p class="location">United States</p>
         <h3>📌 Data & Analytics Engineer</h3>
-        <p class="company">USAA (Contract) - Enabling Compliant, Data-Driven Banking Campaigns at USAA</p>
-        <p class="location">United States</p>
+    
         <p>Domain: Banking, Omnichannel Marketing, Compliance Analytics</p>
         <p>Tools: SQL • Snowflake • Data Warehousing • Tableau • Reporting • Campaign Analytics • Cross-functional Collaboration • JIRA</p>
 
@@ -193,9 +165,10 @@
       </div>
 
       <div class="job-entry">
+	    <h2>Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</h2>
+		<p class="location">United States</p>
         <h3>📌 Data & Analytics Engineer</h3>
-        <p class="company">Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</p>
-        <p class="location">United States</p>
+		
         <p>Tools: SQL • Python • HCPCS/ICD Codes • AWS Athena • S3 • Freshpaint • Mixpanel • Azure DevOps • Supply Chain KPIs</p>
 
         <h4><span class="icon">📝</span> Overview</h4>
@@ -228,9 +201,10 @@
       </div>
 
       <div class="job-entry">
+	    <h2>Gathi Analytics (an Apexon Company) – Data Analytics Enablement Program</h2>
+		 <p class="location">United States</p>
         <h3>📌 Data Engineer</h3>
-        <p class="company">Gathi Analytics (an Apexon Company) – Data Analytics Enablement Program</p>
-        <p class="location">United States</p>
+		
         <p>Domain: Data Analytics • Data Engineering • Business Analysis</p>
         <p>Tools: Data Warehousing • SQL • Python • Tableau • Snowflake • AWS</p>
 
@@ -263,17 +237,17 @@
      </section>
 
       <div class="job-entry">
+	    <h2>University of North Texas</h2>
+		  <p class="location">United States</p>
         <h3>📌 Graduate Student</h3>
-        <p class="company">University of North Texas</p>
-        <p class="location">United States</p>
         <ul>
           <li><a href="projects.html" title="Project Portfolio">Click here to explore my Projects</a></li>
         </ul>
       </div>
 
       <div class="job-entry">
-        <h3>📌 Business Process Lead</h3>
-        <p class="company">Tata Consultancy Services (Client: Pharmaceutical Company)</p>
+		<h2>Tata Consultancy Services (Client: Pharmaceutical Company)</h2>
+		<h3>📌 Business Process Lead</h3>
         <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
         <p>Tools: SAS • SDTM • OpenCDISC Validator • Clinical Data Management • Quality Assurance</p>
 
@@ -305,8 +279,10 @@
       </div>
 
       <div class="job-entry">
-        <h3>📌 Statistical Programmer Trainee</h3>
-        <p class="company">Cytel Statistical Software & Services</p>
+        
+        <h2>Cytel Statistical Software & Services</h2>
+		<h3>📌 Statistical Programmer Trainee</h3>
+		
         <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
         <p>Tools: SAS • SDTM • ADaM overview • Clinical Data Management</p>
 
@@ -339,8 +315,9 @@
       </div>
 
       <div class="job-entry">
-        <h3>📌 Analyst</h3>
-        <p class="company">Marico Ltd.</p>
+        <h2> class="company">Marico Ltd.</h2>
+		<h3>📌 Analyst</h3>
+		
         <p>Domain: Supply Chain Analytics • Field Sales Optimization • Order Management • Retail & Channel Insights</p>
         <p>Tools: MIDAS (Marico Industry Distributed Automated Software) • MS Excel • Retailer Survey</p>
 
@@ -380,13 +357,13 @@
         </main>
 
      <footer>
-    <div class="footer-content">
-      <div class="social-icons">
+      <div class="footer-content">
+       <div class="social-icons">
         <a href="mailto:asgandhe@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+       </div>
+       <p>&copy; 2025 Amruta Gandhe</p>
       </div>
-      <p>&copy; 2025 Amruta Gandhe</p>
-    </div>
-  </footer>
-</body>
-</html>
+     </footer>
+    </body>
+    </html>
