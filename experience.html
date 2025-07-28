@@ -172,30 +172,36 @@
   }
 
   footer {
-    background-color: var(--primary-color);
-    color: #111;
+    background-color: var(--primary-color); /* pastel aqua */
+    color: var(--text-color);               /* #333 for readability */
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
     margin-top: 4rem;
     font-size: 0.9rem;
   }
-  
+
   footer .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 0.8rem;
-  }
-    
-  footer .social-icons a {
-    color: #111;
-    margin: 0 0.8rem;
-    font-size: 1.4rem;
-    transition: color 0.3s ease;
+    gap: 1.5rem; /* Use gap instead of margin for spacing */
+    margin-bottom: 1rem;
   }
 
-  footer .social-icons a:hover {
-    color: var(--accent-color);
+  footer .social-icons a {
+   color: var(--text-color);
+   font-size: 1.6rem;
+   transition: color 0.3s ease;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
   }
+
+  footer .social-icons a:hover,
+  footer .social-icons a:focus {
+   color: var(--accent-color);
+   outline: none;
+  }
+
   </style>
 
 </head>
@@ -437,6 +443,7 @@
   fetch("footer.html")
     .then(res => res.text())
     .then(data => document.getElementById("footer-container").innerHTML = data);
- </script>  
+ </script>
+  
 </body>
 </html>
