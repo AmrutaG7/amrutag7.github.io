@@ -3,352 +3,467 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home - Amruta Gandhe</title>
+  <title>Professional Experience - Amruta Gandhe</title>
+
+  <!-- Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     :root {
-      --bg-color: #faf9f9;
-      --header-color: #AFEEEE;
-      --card-bg: #E0FFFF;
       --primary-color: #333;
+      --background-color: #faf9f9;
       --accent-color: #AFEEEE;
+      --header-footer-color: #AFEEEE;
     }
+
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
       color: var(--primary-color);
-      line-height: 1.6;
-      padding-bottom: 100px;
     }
+
+    header, footer {
+      background: var(--header-footer-color);
+      padding: 1rem 2rem;
+    }
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background-color: var(--header-color);
+      background-color: var(--header-footer-color);
       border-bottom: 1px solid var(--accent-color);
       padding: 10px 20px;
-
-      /* NEW styles for layout */
+	  
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+	  
       z-index: 1000;
     }
+
     .nav-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2F4F4F;
-      width: 150px; /* fixed width */
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #444;
+      width: auto;
+      max-width: 250px; 
+      white-space: nowrap; 
       user-select: none;
     }
-    .nav-links-wrapper {
-      flex-grow: 1;
-      max-width: 700px; /* max width for nav links */
-      display: flex;
-      justify-content: center;
-    }
-    .nav-spacer {
-      width: 150px; /* same width as .nav-name */
-    }
 
-    nav ul {
-      margin: 0;
-      padding: 0;
+    .nav-links-wrapper ul {
       list-style: none;
       display: flex;
-      gap: 30px;
-    }
-    nav li {
-      display: flex;
-      align-items: center;
-    }
-    nav a {
-      color: #2F4F4F;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    nav a:hover {
-      color: #666;
-    }
-    nav svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
-    .hero {
-      text-align: center;
-      padding: 160px 20px 60px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      color: #82c0cc;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--primary-color);
-      margin-bottom: 0;
-    }
-    .project-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto 60px;
-    }
-    .project-card {
-      flex: 1 1 140px;
-      max-width: 160px;
-      background-color: var(--card-bg);
-      color: var(--primary-color);
-      padding: 20px;
-      border-radius: 12px;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    /* Replace fontawesome <i> with SVGs for consistency */
-    .project-card svg {
-      width: 48px;
-      height: 48px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
+      padding-left: 0;
+      margin: 0;
+	  gap: 30px;
     }
 
-    /* 🌈 Add category-specific colors here */
-    .project-card.tableau {
-      background-color: #FAD6D6;
+    .nav-links-wrapper li {
+	  display: flex;       
+      align-items: center; 
     }
-    .project-card.database {
-      background-color: #fcf6d7;
+
+    .nav-links-wrapper a {
+      text-decoration: none;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+	  font-weight: 600; 
+      font-size: 0.9rem; 
     }
-    .project-card.warehouse {
-      background-color: #efe3ff;
+
+    .nav-links-wrapper svg {
+      width: 1em;
+      height: 1em;
+      stroke: #444;
+      stroke-width: 2;
+      fill: none;
     }
-    .project-card.python {
-      background-color: #F5F5DC;
+
+    main.content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
     }
-    .project-card.mining {
-      background-color: #F0F8FF;
-    }
-    .project-card.experience-card {  
-      background-color: #FFF0F5;
-    }
-    footer {
-      background: var(--header-color);
-      border-top: 1px solid var(--accent-color);
-      padding: 20px;
+
+    .page-title {
+      color: #82c0cc;
+      font-size: 2rem;
+      margin-bottom: 2rem;
       text-align: center;
+    }
+
+    .job-entry {
+      background-color: #fff;
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(175, 238, 238, 0.3);
+    }
+
+    .job-entry h2, .job-entry h3 {
+      margin-top: 0;
+    }
+
+    .company {
+      font-weight: bold;
+      color: #6c63ff;
+    }
+
+    .location {
+      color: #6c63ff; ;
+    }
+
+   .job-title {
+     font-size: 1.4rem;
+     color: #82c0cc;
+     font-weight: bold;
+     margin-bottom: 0.5rem;
+    }
+
+    .job-entry ul {
+      padding-left: 1.2rem;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--header-footer-color);
+      border-top: 1px solid var(--accent-color);
+      padding: 12px 20px;
       font-size: 0.9rem;
       color: var(--primary-color);
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+	  
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+	  gap: 10px;  
     }
-    footer .social-links {
+
+    
+	.social-links {
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
-    footer a {
-      color: #2F4F4F;
-      text-decoration: none;
+
+    .social-links a {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
     }
-    footer a:hover {
+
+    .social-links a svg {
+      margin-right: 6px;
+      height: 20px;
+      width: 20px;
+    }
+
+    .social-links a:hover {
       color: var(--accent-color);
     }
-    footer svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
+
+    footer .copyright {
+      font-weight: 500;
+    }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-name">Amruta Gandhe</div>
-    <div class="nav-links-wrapper">
-      <ul>
-        <li>
-          <a href="index.html" aria-label="Home">
-            <svg viewBox="0 0 24 24" >
-              <path d="M3 12L12 3l9 9" />
-              <path d="M9 21V12h6v9" />
-            </svg>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="about.html" aria-label="About">
-            <svg viewBox="0 0 24 24" >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M5.5 21c1.5-4 11.5-4 13 0" />
-            </svg>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="experience.html" aria-label="Professional Experience">
-            <svg viewBox="0 0 24 24" >
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-              <path d="M16 3H8v4h8V3z" />
-            </svg>
-            Professional Experience
-          </a>
-        </li>
-        <li>
-          <a href="projects.html" aria-label="Project Portfolio">
-            <svg viewBox="0 0 24 24" >
-              <rect x="3" y="3" width="7" height="7" rx="1.5" />
-              <rect x="14" y="3" width="7" height="7" rx="1.5" />
-              <rect x="14" y="14" width="7" height="7" rx="1.5" />
-              <rect x="3" y="14" width="7" height="7" rx="1.5" />
-            </svg>
-            Project Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="contact.html" aria-label="Contact">
-            <svg viewBox="0 0 24 24" >
-              <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" />
-              <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" />
-            </svg>
-            Contact
-          </a>
-        </li>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+  <div class="nav-name">Amruta Gandhe</div>
+  <div class="nav-links-wrapper">
+    <ul>
+      <li>
+        <a href="index.html" aria-label="Home">
+          <svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="about.html" aria-label="About">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>
+          About
+        </a>
+      </li>
+      <li>
+        <a href="experience.html" aria-label="Professional Experience">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>
+          Professional Experience
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" aria-label="Project Portfolio">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+          Project Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" aria-label="Contact">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" />
+            <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" />
+          </svg>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-spacer"></div>
+</nav>
+
+  </header>
+
+  <!-- Main Content -->
+  <main class="content" role="main">
+    <h1 class="page-title">Professional Experience</h1>
+	  
+     <div class="job-entry">
+     <h3 class="job-title">📌 Data & Analytics Engineer</h3>
+     <h2><span class="company">USAA (Contract)</span> <span class="location">| United States</span></h2>
+     <p>Domain: Banking, Omnichannel Marketing, Compliance Analytics</p>
+     <p>Tools: SQL • Snowflake • Data Warehousing • Tableau • Reporting • Campaign Analytics • Cross-functional Collaboration • JIRA</p>
+
+     <h4><span class="icon">📝</span> Overview</h4>
+     <p>As part of USAA’s Data Strategy team, I supported the execution, measurement, and infrastructure development of omni-channel marketing campaigns for banking products such as credit cards and deposit accounts. The focus was on delivering personalized and compliant marketing experiences through scalable, cloud-based data solutions.</p>
+
+     <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+     <p>While campaign goals and audience criteria were set by business teams, our responsibility was to operationalize those strategies using accurate, compliant, and efficient data pipelines. This included validating campaign audiences, enabling robust reporting, and ensuring that the data environment supported performance tracking across marketing channels.</p>
+
+     <h4><span class="icon">🧠</span> My Approach</h4>
+     <ul>
+      <li><strong>Data Infrastructure & Modeling:</strong> Developed and maintained a cloud-based marketing data warehouse. Co-designed optimized data models and enabled the flow of attributes from raw to reporting layers in collaboration with engineering teams using Snowflake.</li>
+      <li><strong>Audience Validation & Compliance:</strong> Implemented SQL rules for the Audience Generation Process (AGP) and analyzed pre/post-campaign audience data to ensure compliance by excluding ineligible members during execution.</li>
+      <li><strong>Campaign Reporting:</strong> Partnered with the BBIA reporting team to optimize SQL powering Tableau dashboards, significantly improving performance. Built reports to monitor credit card transactions and campaign engagement.</li>
+      <li><strong>Documentation & Agile Collaboration:</strong> Drafted technical requirement documents, created user stories, and tracked deliverables in JIRA while collaborating across IT and business teams.</li>
+      <li><strong>Data Quality:</strong> Analyzed gaps between source systems and target environments to improve data validation processes and reporting accuracy.</li>
+     </ul>
+
+     <h4><span class="icon">🎯</span> Impact</h4>
+     <ul>
+      <li>Improved campaign compliance by validating audience eligibility and optimizing execution rules.</li>
+      <li>Boosted reporting speed and reliability through efficient SQL and data model improvements.</li>
+      <li>Acted as a bridge between business stakeholders, analysts, and engineers to translate marketing goals into measurable outcomes.</li>
+      </ul>
+      </div>
+
+    <div class="job-entry">
+    <h3 class="job-title">📌 Data & Analytics Engineer</h3>
+    <h2><span class="company">Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</span> <span class="location">|United States</span></h2>
+    <p>Tools: SQL • Python • HCPCS/ICD Codes • AWS Athena • S3 • Freshpaint • Mixpanel • Azure DevOps • Supply Chain KPIs</p>
+	
+	 <h4><span class="icon">📝</span> Overview</h4>
+        <p>
+          Porter is a healthcare e-commerce platform focused on delivering durable medical equipment (DME) to patients through a drop-shipping model supported by Healthsphere. The goal was to enhance data analytics, streamline ordering workflows, and provide greater visibility into customer journeys and supplier performance.
+        </p>
+
+        <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+        <p>
+          Porter's raw medical claims and order data were siloed across systems like AWS Athena and Ultra Commerce, with limited tracking of digital user events or supply chain visibility. The team needed centralized analytics to enable operational metrics and future data warehousing initiatives.
+        </p>
+
+        <h4><span class="icon">🧠</span> My Approach</h4>
+        <ul>
+          <li><strong>Claims Data Analysis:</strong> Preprocessed and performed gap analysis on medical claims using SQL and Python; queried data from S3 via Athena and validated HCPCS, ICD, and principal diagnosis codes.</li>
+          <li><strong>Event Tracking & Analytics:</strong> Supported tagging/testing of customer journey events using Freshpaint and developed Mixpanel dashboards to monitor product views, purchases, and conversions.</li>
+          <li><strong>Agile Collaboration:</strong> Authored user stories and coordinated tasks using Azure DevOps across engineering, operations, and analytics teams.</li>
+          <li><strong>Supplier Coordination:</strong> Participated in supplier meetings to define integration needs and facilitate order fulfillment communication.</li>
+          <li><strong>Supply Chain KPIs:</strong> Analyzed order data and contributed to defining metrics like perfect order rate, on-time delivery, and damage-free delivery.</li>
+          <li><strong>Integration & Scalability:</strong> Worked with engineers integrating vendor and order data via Ultra Commerce, supporting future data warehouse initiatives.</li>
+        </ul>
+
+        <h4><span class="icon">🎯</span> Impact</h4>
+        <ul>
+          <li>Enabled efficient claims data access through Athena and improved code-level validation coverage for DME analysis.</li>
+          <li>Increased visibility into customer behavior using Mixpanel dashboards for leadership review.</li>
+          <li>Improved supply chain communication and KPI tracking for order processing and vendor coordination.</li>
+          <li>Established foundational analytics workflows supporting future growth in data warehousing and reporting automation.</li>
+        </ul>
+    </div>
+	
+	<div class="job-entry">
+    <h3 class="job-title">📌 Data Engineer</h3>
+    <h2><span class="company">Gathi Analytics (an Apexon Company) – Data Analytics Enablement Program</span> <span class="location">| United States</span></h2>
+    <p>Tools: Data Warehousing • SQL • Python • Tableau • Snowflake • AWS</p>
+	
+	   <h4><span class="icon">📝</span> Overview</h4>
+        <p>
+        Completed an intensive, multi-phase training program designed to simulate real-world business data analytics and engineering challenges. The program emphasized technical proficiency, business storytelling, and cross-functional communication, formally evaluated by senior leadership and the CEO.
+        </p>
+
+       <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+       <p>
+       The training aimed to provide practical experience across the analytics lifecycle—from data modeling and querying to visualization — through hands-on assessments and performance reviews. Each phase tested real-world problem-solving, technical execution, and the ability to convey actionable insights to stakeholders.
+       </p>
+
+       <h4><span class="icon">🧠</span> My Approach</h4>
+       <ul>
+         <li>Designed logical data models for real-world datasets, applying data warehousing best practices.</li>
+         <li>Built and optimized SQL and Python-based analytics queries to extract meaningful insights and track KPIs.</li>
+         <li>Created an interactive Tableau dashboard with multiple visualizations highlighting business trends.</li>
+         <li>Worked on AWS and Snowflake deployment tasks, simulating enterprise-scale analytics workflows.</li>
+         <li>Delivered a business presentation and data storytelling pitch to senior leadership and an evaluation panel.</li>
+       </ul>
+
+      <h4><span class="icon">🎯</span> Impact</h4>
+       <ul>
+         <li>Gained practical experience across the data analytics lifecycle—from data extraction and modeling to reporting and presentation.</li>
+         <li>Enhanced technical proficiency in SQL, Python, Tableau, Snowflake, and AWS.</li>
+         <li>Successfully presented a business case and received formal endorsement from senior leaders and the CEO.</li>
+       </ul>
+     </div>
+	 
+	<div class="job-entry">
+      <h3 class="job-title">📌 Graduate Student</h3>
+      <h2><span class="company">University of North Texas</span> <span class="location">| United States</span></h2>
+	
+	  <ul>
+          <li><a href="projects.html" title="Project Portfolio">Click here to explore my Projects</a></li>
       </ul>
     </div>
-    <div class="nav-spacer"></div>
-  </nav>
+	
+	<div class="job-entry">
+     <h3 class="job-title">📌 Business Process Lead</h3>
+     <h2><span class="company">Tata Consultancy Services (Client: Pharmaceutical Company)</span></h2>
+	 <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
+     <p>Tools: SAS • SDTM • OpenCDISC Validator • Clinical Data Management • Quality Assurance</p>
+	
+	 <h4><span class="icon">📝</span> Overview</h4>
+	  <p> Supported clinical trial data analytics for Phase 2 and Phase 3 studies, focusing on ensuring high-quality, regulatory-compliant datasets. The project involved transforming raw clinical data into standardized SDTM datasets for regulatory submission, enabling the client to meet strict CDISC guidelines and FDA requirements. The role required data validation, specification creation, and close collaboration with clinical teams to uphold data integrity.
+      </p>
 
-  <div class="hero">
-    <!-- REMOVED the h1 "Amruta Gandhe" here as requested -->
-    <p>Welcome to my Business Analytics portfolio.</p>
-  </div>
+     <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+      <p> Clinical trial data often comes in complex, raw formats that must be meticulously standardized according to CDISC guidelines for regulatory review. Ensuring this transformation is accurate and compliant is critical, as any inconsistencies can delay regulatory approvals. The project demanded rigorous quality control, adherence to protocol, and seamless coordination among cross-functional teams.
+      </p>
 
-  <section id="experience">
-    <h2 style="text-align:center; color: #82c0cc; font-size: 2rem;">Professional Experience</h2>
-    <p style="text-align:center; font-size: 1rem; margin-bottom: 40px;">
-      Versatile Business Data Analyst experience in data analytics, business intelligence, and data interpretation across banking, healthcare, and supply chain sectors. Adept at delivering actionable insights through data storytelling, SQL/Python scripting, and visualization tools. Experienced in cloud platforms including AWS and Snowflake, and highly skilled in collaborating across cross-functional teams to build scalable analytics solutions. SAS Certified Base Programmer with strong analytical, communication, and problem-solving abilities.
-    </p>
-    <div class="project-grid">
-      <a href="experience.html" class="project-card experience-card" aria-label="View Full Experience">
-        <svg viewBox="0 0 24 24" >
-          <path d="M10 20v-6h4v6" />
-          <rect x="6" y="8" width="12" height="12" rx="2" ry="2" />
-          <path d="M6 8V6a6 6 0 0 1 12 0v2" />
-        </svg>
-        <h3>View Full Experience</h3>
-      </a>
+     <h4><span class="icon">🧠</span> My Approach</h4>
+      <ul>
+        <li>Efficiently processed and analyzed clinical datasets using SAS to generate key insights for safety and efficacy assessments.</li>
+        <li>Reviewed study protocols and Case Report Forms (CRFs) to ensure alignment with clinical and regulatory standards.</li>
+        <li>Collaborated with project leads and managers to support and oversee client-developed SDTM transformation workflows, ensuring accuracy and compliance.</li>
+        <li>Led quality control initiatives using OpenCDISC Validator and internal QA tools to identify and correct data issues, minimizing risks for regulatory submission.</li>
+        <li>Maintained ongoing communication with clients, providing updates and promptly addressing analytic requirements to meet project milestones.</li>
+      </ul>
+
+     <h4><span class="icon">🎯</span> Impact</h4>
+      <ul>
+        <li>Contributed to the successful delivery of high-quality, compliant clinical datasets that supported regulatory submissions.</li>
+        <li>Improved data quality and minimized errors through proactive quality control and validation processes.</li>
+        <li>Strengthened client trust by ensuring timely delivery and transparent communication throughout the clinical data lifecycle.</li>
+        </ul>
     </div>
-  </section>
+	
+	<div class="job-entry">
+     <h3 class="job-title">📌Statistical Programmer</h3>
+     <h2><span class="company">Cytel Statistical Software & Services</span></h2>
+	 <p>Domain: Clinical Data Analytics • Pharmaceuticals and Clinical Research • Healthcare and Medical Research • Quality Control (QC) • Quality Assurance (QA)</p>
+     <p>Tools: SAS • SDTM • ADaM overview • Clinical Data Management</p>
+	
+	 <h4><span class="icon">📝</span> Overview</h4>
+	 <p> Supported clinical data analytics training focused on developing skills in SAS programming, clinical protocol interpretation, and standardized data management. Engaged in hands-on projects to prepare for real-world clinical trial data processing and reporting.
+     </p>
 
-  <section id="projects">
-    <h2 style="text-align:center; color: #82c0cc; font-size: 2rem;">Explore My Projects</h2>
-    <p style="text-align:center; margin-bottom: 40px; font-size: 1rem;">
-      Click a category below to explore related projects and view project reports.
-    </p>
-    <div class="project-grid">
-      <a href="projects.html" class="project-card tableau" aria-label="Tableau Projects">
-        <svg viewBox="0 0 24 24">
-          <rect x="10" y="3" width="4" height="18" />
-          <rect x="3" y="10" width="18" height="4" />
-        </svg>
-        <h3>Tableau</h3>
-      </a>
-      <a href="projects.html" class="project-card database" aria-label="Database Management Projects">
-        <svg viewBox="0 0 24 24">
-          <ellipse cx="12" cy="6" rx="9" ry="3" />
-          <path d="M3 6v6c0 1.5 4 3 9 3s9-1.5 9-3V6" />
-          <path d="M3 12v6c0 1.5 4 3 9 3s9-1.5 9-3v-6" />
-        </svg>
-        <h3>Database Management</h3>
-      </a>
-      <a href="projects.html" class="project-card warehouse" aria-label="Data Warehouse Projects">
-        <svg viewBox="0 0 24 24">
-          <path d="M3 3h18v18H3z" />
-          <path d="M9 3v18" />
-          <path d="M15 3v18" />
-          <path d="M3 9h18" />
-          <path d="M3 15h18" />
-        </svg>
-        <h3>Data Warehouse</h3>
-      </a>
-      
-    <a href="projects.html" class="project-card python" aria-label="Python Projects">
-  <!-- Custom Playful Snake Icon -->
-      <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path d="M12 32c0-10 6-18 20-18s20 8 20 18-6 16-16 16h-8v4h-4v-4h-4v-4h4v-4h8c6 0 8-4 8-8s-2-10-12-10-12 6-12 10H12z" fill="#82c0cc"/>
-         <circle cx="24" cy="28" r="2" fill="#fff"/>
-         <circle cx="40" cy="28" r="2" fill="#fff"/>
-      </svg>
-      <h3>Python</h3>
-    </a>
+     <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+     <p> The training program simulated clinical trial workflows requiring accurate interpretation of clinical study protocols, annotation of Case Report Forms (CRFs), and creation of SDTM datasets compliant with CDISC guidelines. The goal was to build competence in transforming raw clinical data into validated, standardized formats for downstream analysis and regulatory submission readiness.
+     </p>
 
-      <a href="projects.html" class="project-card mining" aria-label="Data Mining Projects">
-        <svg viewBox="0 0 24 24">
-          <ellipse cx="12" cy="7" rx="9" ry="3" />
-          <path d="M3 7v10c0 1.5 4 3 9 3s9-1.5 9-3V7" />
-        </svg>
-        <h3>Data Mining</h3>
-      </a>
+    <h4><span class="icon">🧠</span> My Approach</h4>
+        <ul>
+          <li>Developed SAS programming skills through practical assignments and project work involving clinical data.</li>
+          <li>Interpreted clinical protocols and carefully annotated CRFs to ensure precision in data capture.</li>
+          <li>Assisted in creating and validating SDTM datasets per CDISC Implementation Guide 3.2 standards.</li>
+          <li>Generated Tables, Listings, and Figures (TLFs) using SAS to support clinical decision-making processes.</li>
+          <li>Collaborated in clinical analytics projects delivering accurate and timely data outputs reflecting study progress.</li>
+        </ul>
+
+    <h4><span class="icon">🎯</span> Impact</h4>
+        <ul>
+          <li>Gained foundational expertise in clinical data standards and regulatory requirements.</li>
+          <li>Developed practical skills in SAS programming and clinical data management through hands-on projects.</li>
+          <li>Built strong understanding of data quality and compliance processes essential for clinical research.</li>
+          <li>Prepared to contribute effectively to clinical analytics teams with solid training in data validation and reporting.</li>
+        </ul>
     </div>
-  </section>
+	
+   <div class="job-entry">
+     <h3 class="job-title">📌 Analyst</h3>
+     <h2><span class="company">Marico Limited</span></h2>
+     <p>Domain: Supply Chain Analytics • Field Sales Optimization • Order Management • Retail & Channel Insights</p>
+     <p>Tools: MIDAS (Marico Industry Distributed Automated Software) • MS Excel • Retailer Survey</p>
+	
+     <h4><span class="icon">📝</span> Overview</h4>
+     <p>
+          At Marico, I contributed to supply chain and retail analytics initiatives aimed at improving telecalling-based order management, distributor performance tracking, and outlet-level visibility. 
+          The focus was on evaluating Marico’s existing order fulfillment workflows and designing standardized procedures supported by actionable data insights.
+      </p>
 
+      <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+        <p>
+          Marico’s traditional order management system heavily relied on field sales representatives (FSRs), resulting in inefficiencies, delayed tracking, and inconsistent communication. 
+          The company sought to introduce structured telecalling operations via a web portal and enhance distributor accountability, sales visibility, and service levels through data-backed decision-making.
+        </p>
+
+        <h4><span class="icon">🧠</span> My Approach</h4>
+        <ul>
+          <li><strong>Supply Chain Analytics:</strong> Analyzed sales and supply chain data using MIDAS to identify underperforming outlets, stock availability issues, and operational gaps.</li>
+          <li><strong>Distributor Support:</strong> Worked closely with 7 Marico distributors to deliver actionable insights and support the implementation of SOP-based telecalling and order processing.</li>
+          <li><strong>Retailer Research:</strong> Conducted structured telephonic surveys and interviews with retailers to assess satisfaction levels, understand order delays, and gather improvement suggestions.</li>
+          <li><strong>SOP Creation:</strong> Designed two key SOPs for standard telecalling and web portal usage to streamline distributor workflows.</li>
+          <li><strong>Cross-Functional Coordination:</strong> Partnered with area sales managers and channel teams to promote consistent reporting, improve data accuracy, and monitor FSR performance.</li>
+          <li><strong>Quantitative & Qualitative Research:</strong> Conducted distributor and retailer research to identify gaps and benchmark FSR vs. telecalling performance using SPSS.</li>
+          <li><strong>Reporting & Insights:</strong> Created final reports with visualizations, findings, and actionable recommendations to optimize order cycles and outlet engagement.</li>
+        </ul>
+
+        <h4><span class="icon">🎯</span> Impact</h4>
+        <ul>
+          <li>Contributed to a <strong>2% sales increase</strong> across supported distributors by enhancing order accuracy and telecalling coordination.</li>
+          <li>Improved outlet-level visibility and order tracking using MIDAS and survey insights.</li>
+          <li>Helped standardize distributor processes for web-portal-based telecalling and reporting.</li>
+          <li>Strengthened operational effectiveness across 7 distributors through improved SOPs and data-backed decision-making.</li>
+          <li>Acquired hands-on experience with outlet programs, retail operations, and cross-functional analytics in an FMCG environment.</li>
+        </ul>
+    </div>
+</main>
+
+  <!-- Footer -->
   <footer>
-    <div class="social-links">
-      <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4z" />
-          <path d="M4 4l8 8 8-8" />
-        </svg>
-        <span>Email</span>
-      </a>
-      <a class="linkedin-icon" href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-    </div>
-    <div>© Amruta Gandhe</div>
-  </footer>
+  <div class="social-links">
+    <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M4 4l8 8 8-8" />
+      </svg>
+      <span>Email</span>
+    </a>
+    <a class="linkedin-icon" href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+  </div>
+  <div class="copyright">© 2025 Amruta Gandhe</div>
+</footer>
+
 </body>
 </html>
