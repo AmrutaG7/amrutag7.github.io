@@ -5,34 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Professional Experience - Amruta Gandhe</title>
 
-  <!-- Font Awesome for social icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <!-- Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Embedded CSS -->
   <style>
     :root {
       --primary-color: #333;
       --background-color: #faf9f9;
-      --accent-color: #82c0cc;
-      --card-background: #ffffff;
-      --header-footer-color: #afeeee;
+      --accent-color: #AFEEEE;
+      --header-footer-color: #f0f8ff;
     }
 
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       background-color: var(--background-color);
       color: var(--primary-color);
     }
 
     header, footer {
-      background-color: var(--header-footer-color);
-      padding: 1rem;
-      text-align: center;
+      background: var(--header-footer-color);
+      padding: 1rem 2rem;
     }
 
     nav {
@@ -40,127 +34,103 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
     .nav-name {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: bold;
-      color: var(--primary-color);
+      color: #444;
     }
 
     .nav-links-wrapper ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding-left: 0;
+      margin: 0;
     }
 
-    .nav-links-wrapper li a {
+    .nav-links-wrapper li {
+      margin-left: 1rem;
+    }
+
+    .nav-links-wrapper a {
       text-decoration: none;
-      color: var(--primary-color);
+      color: #444;
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      font-weight: 500;
     }
 
     .nav-links-wrapper svg {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: var(--primary-color);
+      width: 1em;
+      height: 1em;
+      stroke: #444;
       stroke-width: 2;
+      fill: none;
     }
 
-    .content {
+    main.content {
       max-width: 900px;
       margin: 2rem auto;
-      padding: 2rem 1rem;  /* previous --0 1rem; */
+      padding: 2rem 1rem;
     }
 
-    h1 {
-      color: var(--accent-color);
+    .page-title {
+      color: #82c0cc;
       font-size: 2rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
 
-.job-entry {
-   background-color: var(--card-background); 
-   border-left: 5px solid var(--accent-color); 
-   padding: 1.5rem 2rem;
-   margin-bottom: 2rem;
-   border-radius: 8px;
-   box-shadow: 0 2px 6px rgba(130, 192, 204, 0.2); 
-}
+    .job-entry {
+      background-color: #fff;
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(175, 238, 238, 0.3);
+    }
 
-.job-entry h3 {
-   margin: 0.5rem 0 1rem 0;
-   color: var(--accent-color); 
-   font-style: italic;
-   font-weight: 400;
-}
+    .job-entry h2, .job-entry h3 {
+      margin-top: 0;
+    }
 
-.job-entry h4 {
-   margin-top: 1rem;
-   color: var(--accent-color);
-   font-weight: 600;
-}
+    .company {
+      font-weight: bold;
+    }
 
-.job-entry p,
-.job-entry ul {
-   margin: 0.5rem 0 1rem 0;
-   color: #333;
-   line-height: 1.5;
- }
+    .location {
+      font-style: italic;
+      color: #666;
+    }
 
-.job-entry ul {
-  padding-left: 1.25rem;
- }
+    .job-entry ul {
+      padding-left: 1.2rem;
+    }
 
-  .company {
-    color: #6c63ff;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    display: inline;
-   }
-
-   .location {
-     color: #6c63ff;
-     font-weight: 600; /* optional: to visually balance with company */
-     margin: 0; /* optional: to keep consistent spacing */
+    .icon {
+      margin-right: 0.5rem;
     }
 
     footer {
-      margin-top: 2rem;
-    }
-
-    .social-icons {
+      border-top: 1px solid var(--accent-color);
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--primary-color);
     }
 
     .social-icons a {
+      margin-left: 0.5rem;
       color: var(--primary-color);
-      font-size: 1.2rem;
     }
 
     .social-icons a:hover {
       color: var(--accent-color);
     }
-
-    footer p {
-      margin: 0;
-    }
   </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
@@ -212,43 +182,41 @@
     </nav>
   </header>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <main class="content" role="main">
-  <h1 class="page-title">Professional Experience</h1>
+    <h1 class="page-title">Professional Experience</h1>
 
-  <div class="job-entry">
-    <h3>📌 Data & Analytics Engineer</h3>
-    <h2><span class="company">USAA (Contract)</span> <span class="location">| United States</span></h2>
-    <p>Domain: Banking, Omnichannel Marketing, Compliance Analytics</p>
-    <p>Tools: SQL • Snowflake • Data Warehousing • Tableau • Reporting • Campaign Analytics • Cross-functional Collaboration • JIRA</p>
+    <div class="job-entry">
+      <h3>📌 Data & Analytics Engineer</h3>
+      <h2><span class="company">USAA (Contract)</span> <span class="location">| United States</span></h2>
+      <p>Domain: Banking, Omnichannel Marketing, Compliance Analytics</p>
+      <p>Tools: SQL • Snowflake • Data Warehousing • Tableau • Reporting • Campaign Analytics • Cross-functional Collaboration • JIRA</p>
 
-    <h4><span class="icon">📝</span> Overview</h4>
-    <p> As part of USAA’s Data Strategy team, I supported the execution, measurement, and infrastructure development of omni-channel marketing campaigns for banking products such as credit cards and deposit accounts. The focus was on delivering personalized and compliant marketing experiences through scalable, cloud-based data solutions.
-    </p>
-	
-    <h4><span class="icon">⚙️</span> Challenge & Context</h4>
-    <p>While campaign goals and audience criteria were set by business teams, our responsibility was to operationalize those strategies using accurate, compliant, and efficient data pipelines. This included validating campaign audiences, enabling robust reporting, and ensuring that the data environment supported performance tracking across marketing channels.
-	</p>
+      <h4><span class="icon">📝</span> Overview</h4>
+      <p>As part of USAA’s Data Strategy team, I supported the execution, measurement, and infrastructure development of omni-channel marketing campaigns for banking products such as credit cards and deposit accounts. The focus was on delivering personalized and compliant marketing experiences through scalable, cloud-based data solutions.</p>
 
-    <h4><span class="icon">🧠</span> My Approach</h4>
-    <ul>
+      <h4><span class="icon">⚙️</span> Challenge & Context</h4>
+      <p>While campaign goals and audience criteria were set by business teams, our responsibility was to operationalize those strategies using accurate, compliant, and efficient data pipelines. This included validating campaign audiences, enabling robust reporting, and ensuring that the data environment supported performance tracking across marketing channels.</p>
+
+      <h4><span class="icon">🧠</span> My Approach</h4>
+      <ul>
         <li><strong>Data Infrastructure & Modeling:</strong> Developed and maintained a cloud-based marketing data warehouse. Co-designed optimized data models and enabled the flow of attributes from raw to reporting layers in collaboration with engineering teams using Snowflake.</li>
         <li><strong>Audience Validation & Compliance:</strong> Implemented SQL rules for the Audience Generation Process (AGP) and analyzed pre/post-campaign audience data to ensure compliance by excluding ineligible members during execution.</li>
         <li><strong>Campaign Reporting:</strong> Partnered with the BBIA reporting team to optimize SQL powering Tableau dashboards, significantly improving performance. Built reports to monitor credit card transactions and campaign engagement.</li>
         <li><strong>Documentation & Agile Collaboration:</strong> Drafted technical requirement documents, created user stories, and tracked deliverables in JIRA while collaborating across IT and business teams.</li>
         <li><strong>Data Quality:</strong> Analyzed gaps between source systems and target environments to improve data validation processes and reporting accuracy.</li>
-    </ul>
+      </ul>
 
-    <h4><span class="icon">🎯</span> Impact</h4>
-    <ul>
+      <h4><span class="icon">🎯</span> Impact</h4>
+	  <ul>
         <li>Improved campaign compliance by validating audience eligibility and optimizing execution rules.</li>
         <li>Boosted reporting speed and reliability through efficient SQL and data model improvements.</li>
         <li>Acted as a bridge between business stakeholders, analysts, and engineers to translate marketing goals into measurable outcomes.</li>
-    </ul>
-	
-  <div>
-  
-  <div class="job-entry">
+	  </ul>
+	  
+    </div>
+
+    <div class="job-entry">
     <h3>📌 Data & Analytics Engineer</h3>
     <h2><span class="company">Porter (Contract) – Data & Analytics Enablement for Healthcare E-Commerce</span> <span class="location">|United States</span></h2>
     <p>Tools: SQL • Python • HCPCS/ICD Codes • AWS Athena • S3 • Freshpaint • Mixpanel • Azure DevOps • Supply Chain KPIs</p>
@@ -426,14 +394,19 @@
     </div>
 </main>
 
+  </main>
 
   <!-- Footer -->
   <footer>
+    <div>© 2025 Amruta Gandhe</div>
     <div class="social-icons">
-      <a href="mailto:asgandhe@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:amrutagandhe7@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/amrutagandhe/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
-    <p>&copy; 2025 Amruta Gandhe</p>
   </footer>
 
 </body>
