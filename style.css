@@ -78,7 +78,6 @@ main {
 }
 
 /* NAVBAR */
-
 nav {
   background-color: var(--primary-color);
   color: #111;
@@ -98,6 +97,7 @@ nav {
   font-weight: 700;
   font-size: 1.2rem;
   color: #111;
+  user-select: none;
 }
 
 .nav-links-wrapper ul {
@@ -124,14 +124,23 @@ nav {
   outline: none;
 }
 
+/* Added stroke styling for SVG icons to match your navbar icons */
 nav svg {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Optional spacer for balanced navbar layout */
+.nav-spacer {
+  width: 150px; /* match .nav-name width */
 }
 
 /* FOOTER */
-
 footer {
   background-color: var(--primary-color);
   color: var(--text-color);
@@ -165,7 +174,6 @@ footer .social-icons a:focus {
 }
 
 /* EXPERIENCE PAGE SPECIFIC */
-
 .job-entry {
   background-color: white;
   border-radius: 8px;
@@ -242,7 +250,6 @@ h4 {
 }
 
 /* Responsive tweaks */
-
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
