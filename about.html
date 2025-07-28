@@ -91,6 +91,22 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
+	
+	/* Glow effect for yellow lightbulb icon */
+    .glowing-icon {
+      color: #FFD700;
+      text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFA500;
+      animation: glowPulse 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from {
+      text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFA500;
+    }
+    to {
+     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFA500;
+     }
+    }
 
     main {
       max-width: 900px;
@@ -268,7 +284,7 @@
 
 <main>
   <img src="assets/profile.jpg" alt="Amruta Gandhe" class="profile-pic" />
-  <h1 class="hero"><i class="fas fa-lightbulb" style="color: #FFD700;"></i> Amruta Gandhe</h1>
+  <h1 class="hero"><i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe
   <p style="text-align: center; color: #82c0cc;"><strong>Data Analytics &amp; BI | Data Strategy &amp; Omnichannel Insights | SQL • Tableau | Cloud: Snowflake</strong></p>
 
   <section class="bio">
