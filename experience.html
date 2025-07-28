@@ -88,38 +88,46 @@
       text-align: center;
     }
 
-    .job-entry {
-      background-color: var(--card-background); 
-      border-left: 5px solid var(--accent-color); 
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-  
-      }
+.job-entry {
+   background-color: var(--card-background); 
+   border-left: 5px solid var(--accent-color); 
+   padding: 1.5rem 2rem;
+   margin-bottom: 2rem;
+   border-radius: 8px;
+   box-shadow: 0 2px 6px rgba(130, 192, 204, 0.2); 
+}
 
-    .job-entry h2 {
-      margin-top: 0;
-      color: #6c63ff;
-    }
+.job-entry h3 {
+   margin: 0.5rem 0 1rem 0;
+   color: var(--accent-color); 
+   font-style: italic;
+   font-weight: 400;
+}
 
-    .job-entry h3 {
-      margin: 0.5rem 0;
-      color: #82c0cc;
-      font-style: italic;
-      font-weight: 400;
-    }
+.job-entry h4 {
+   margin-top: 1rem;
+   color: var(--accent-color);
+   font-weight: 600;
+}
 
-    .job-entry ul {
-      padding-left: 1.25rem;
-    }
+.job-entry p,
+.job-entry ul {
+   margin: 0.5rem 0 1rem 0;
+   color: #333;
+   line-height: 1.5;
+ }
 
-    .company {
-      color: #6c63ff;
-      font-weight: 600;
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
+.job-entry ul {
+  padding-left: 1.25rem;
+ }
+
+  .company {
+    color: #6c63ff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    display: inline;
+   }
 
     footer {
       margin-top: 2rem;
