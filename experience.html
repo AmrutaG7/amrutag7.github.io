@@ -47,7 +47,7 @@
 
     .nav-name {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #444;
       width: auto;
       max-width: 250px; 
@@ -60,11 +60,11 @@
       display: flex;
       padding-left: 0;
       margin: 0;
-      gap: 30px;
+	  gap: 30px;
     }
 
     .nav-links-wrapper li {
-      display: flex;       
+	  display: flex;       
       align-items: center; 
     }
 
@@ -74,18 +74,16 @@
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      font-weight: 600; 
+	  font-weight: 600; 
       font-size: 0.9rem; 
     }
 
     .nav-links-wrapper svg {
-      width: 20px;
-      height: 20px;
+      width: 1em;
+      height: 1em;
       stroke: #444;
-      stroke-width: 1.5;
+      stroke-width: 2;
       fill: none;
-      stroke-linejoin: round;
-      stroke-linecap: round;
     }
 
     main.content {
@@ -144,14 +142,18 @@
       padding: 10px 20px;
       font-size: 0.9rem;
       color: var(--primary-color);
+	  
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+	  gap: 15px; 
+      flex-wrap: wrap; 
     }
 
     .social-icons a {
       margin-left: 0.5rem;
       color: var(--primary-color);
+	  font-size: 1.2rem;
     }
 
     .social-icons a:hover {
@@ -425,16 +427,17 @@
 
   <!-- Footer -->
   <footer>
-    <div>© 2025 Amruta Gandhe</div>
-    <div class="social-icons">
-      <a href="mailto:amrutagandhe7@gmail.com" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/amrutagandhe/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-  </footer>
+  <div class="social-icons">
+    <a href="mailto:amrutagandhe7@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/amrutagandhe/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  <div>© 2025 Amruta Gandhe</div>
+</footer>
+
 
 </body>
 </html>
