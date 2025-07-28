@@ -94,29 +94,26 @@
 	
 	/* Glow effect for yellow lightbulb icon */
    .glowing-icon {
-  color: #FFD700; /* Yellow bulb */
-  text-shadow:
-    0 0 1px #000,          /* thin black outline for clarity */
-    0 0 4px #FFD700,       /* soft yellow glow */
-    0 0 6px #FFA500,       /* orange tint glow */
-    1px 1px 2px rgba(0,0,0,0.5); /* realistic border/shadow */
-  animation: glowPulse 1.5s ease-in-out infinite alternate;
+     color: #FFD700; /* bright yellow */
+     text-shadow: 
+     0 0 5px #FFD700,  /* soft yellow glow */
+     0 0 10px #FFA500, /* orange glow for warmth */
+     0 0 15px #FFD700; /* extended glow */
+    animation: glowPulse 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes glowPulse {
   from {
-    text-shadow:
-      0 0 1px #000,
-      0 0 6px #FFD700,
-      0 0 10px #FFA500,
-      1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 
+      0 0 3px #FFD700,
+      0 0 6px #FFA500,
+      0 0 12px #FFD700;
   }
   to {
-    text-shadow:
-      0 0 1px #000,
-      0 0 12px #FFD700,
-      0 0 20px #FFA500,
-      1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 
+      0 0 8px #FFD700,
+      0 0 14px #FFA500,
+      0 0 20px #FFD700;
   }
 }
 
@@ -296,7 +293,9 @@
 
 <main>
   <img src="assets/profile.jpg" alt="Amruta Gandhe" class="profile-pic" />
-  <h1 class="hero"><i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe</h1>
+  <h1 class="hero">
+  <i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe
+</h1>
 </h1>
   <p style="text-align: center; color: #82c0cc;"><strong>Data Analytics &amp; BI | Data Strategy &amp; Omnichannel Insights | SQL • Tableau | Cloud: Snowflake</strong></p>
 
