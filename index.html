@@ -5,200 +5,241 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home - Amruta Gandhe</title>
   <style>
-    :root {
-      --bg-color: #faf9f9;
-      --header-color: #AFEEEE;
-      --card-bg: #E0FFFF;
-      --primary-color: #333;
-      --accent-color: #AFEEEE;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--primary-color);
-      line-height: 1.6;
-      padding-bottom: 100px;
-    }
+  :root {
+    --bg-color: #faf9f9;
+    --header-color: #AFEEEE;
+    --card-bg: #E0FFFF;
+    --primary-color: #333;
+    --accent-color: #AFEEEE;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding-bottom: 100px;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .nav-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2F4F4F;
+    width: 150px;
+    user-select: none;
+  }
+  .nav-links-wrapper {
+    flex-grow: 1;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-spacer {
+    width: 150px;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  nav li {
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    color: #2F4F4F;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  nav a:hover {
+    color: #666;
+  }
+  nav svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .hero {
+    text-align: center;
+    padding: 160px 20px 60px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    color: #82c0cc;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+  }
+  .project-card {
+    flex: 1 1 140px;
+    max-width: 160px;
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  .project-card svg {
+    width: 48px;
+    height: 48px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .project-card.tableau {
+    background-color: #FAD6D6;
+  }
+  .project-card.database {
+    background-color: #fcf6d7;
+  }
+  .project-card.warehouse {
+    background-color: #efe3ff;
+  }
+  .project-card.python {
+    background-color: #F5F5DC;
+  }
+  .project-card.mining {
+    background-color: #F0F8FF;
+  }
+  .project-card.experience-card {
+    background-color: #FFF0F5;
+  }
+  footer {
+    background: var(--header-color);
+    border-top: 1px solid var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  footer .social-links {
+    display: flex;
+    gap: 20px;
+  }
+  footer a {
+    color: #2F4F4F;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  footer a:hover {
+    color: var(--accent-color);
+  }
+  footer svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  /* 🌐 Mobile Responsive Adjustments */
+  @media (max-width: 768px) {
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--header-color);
-      border-bottom: 1px solid var(--accent-color);
-      padding: 10px 20px;
-
-      /* NEW styles for layout */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      z-index: 1000;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
     }
-    .nav-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2F4F4F;
-      width: 150px; /* fixed width */
-      user-select: none;
-    }
+
     .nav-links-wrapper {
-      flex-grow: 1;
-      max-width: 700px; /* max width for nav links */
-      display: flex;
-      justify-content: center;
-    }
-    .nav-spacer {
-      width: 150px; /* same width as .nav-name */
+      justify-content: flex-start;
+      width: 100%;
+      max-width: none;
+      overflow-x: auto;
     }
 
     nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    nav li {
-      display: flex;
-      align-items: center;
-    }
-    nav a {
-      color: #2F4F4F;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    nav a:hover {
-      color: #666;
-    }
-    nav svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
-    .hero {
-      text-align: center;
-      padding: 160px 20px 60px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      color: #82c0cc;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--primary-color);
-      margin-bottom: 0;
-    }
-    .project-grid {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto 60px;
-    }
-    .project-card {
-      flex: 1 1 140px;
-      max-width: 160px;
-      background-color: var(--card-bg);
-      color: var(--primary-color);
-      padding: 20px;
-      border-radius: 12px;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    /* Replace fontawesome <i> with SVGs for consistency */
-    .project-card svg {
-      width: 48px;
-      height: 48px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
+      gap: 15px;
+      padding-top: 10px;
     }
 
-    /* 🌈 Add category-specific colors here */
-    .project-card.tableau {
-      background-color: #FAD6D6;
+    .nav-name,
+    .nav-spacer {
+      width: auto;
     }
-    .project-card.database {
-      background-color: #fcf6d7;
-    }
-    .project-card.warehouse {
-      background-color: #efe3ff;
-    }
-    .project-card.python {
-      background-color: #F5F5DC;
-    }
-    .project-card.mining {
-      background-color: #F0F8FF;
-    }
-    .project-card.experience-card {  
-      background-color: #FFF0F5;
-    }
-    footer {
-      background: var(--header-color);
-      border-top: 1px solid var(--accent-color);
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--primary-color);
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: flex;
+
+    .project-grid {
       flex-direction: column;
       align-items: center;
+    }
+
+    .project-card {
+      max-width: 90%;
+      width: 100%;
+    }
+
+    footer {
+      position: static;
+      padding: 20px 10px;
+    }
+
+    footer .social-links {
+      flex-direction: column;
       gap: 10px;
     }
-    footer .social-links {
-      display: flex;
-      gap: 20px;
-    }
-    footer a {
-      color: #2F4F4F;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    footer a:hover {
-      color: var(--accent-color);
-    }
-    footer svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
-  </style>
+  }
+</style>
+
 </head>
 <body>
   <nav>
