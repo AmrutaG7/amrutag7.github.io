@@ -13,6 +13,8 @@
       --icon-color: #333;
       --button-color: #82c0cc;
       --button-text: #fff;
+      --accent-color: #AFEEEE;
+      --header-footer-color: #AFEEEE;
     }
 
     body {
@@ -20,15 +22,24 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
+      padding-bottom: 100px;
+      line-height: 1.5;
+      font-size: 16px;
     }
 
     header {
       background-color: var(--header-color);
-      padding: 1rem 1rem;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid var(--accent-color);
+      z-index: 1000;
+      flex-wrap: wrap;
     }
 
     .header-name {
@@ -36,18 +47,20 @@
       font-size: 1.25rem;
       color: var(--text-color);
       flex-shrink: 0;
+      user-select: none;
     }
 
-    .nav-wrapper {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: max-content;
+    /* Navigation wrapper (to center nav on desktop) */
+    .nav-links-wrapper {
+      flex-grow: 1;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
     }
 
     nav {
       display: flex;
-      gap: 2rem;
+      gap: 30px;
     }
 
     nav a {
@@ -57,6 +70,12 @@
       display: flex;
       align-items: center;
       gap: 6px;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #666;
     }
 
     nav svg {
@@ -64,14 +83,29 @@
       height: 20px;
       stroke: var(--icon-color);
       fill: none;
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    /* Hamburger menu button - hidden on desktop */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      cursor: pointer;
+      padding: 10px;
+      margin-left: auto;
     }
 
     main {
-      padding: 2rem;
+      padding: 120px 20px 40px; /* padding top adjusted for fixed header */
       text-align: center;
     }
 
-    h1 {
+    h1, h2 {
       color: var(--text-color);
       font-size: 2rem;
       margin-bottom: 0.5rem;
@@ -80,6 +114,7 @@
     p {
       margin-bottom: 2rem;
       font-size: 1.1rem;
+      color: var(--text-color);
     }
 
     form {
@@ -122,31 +157,6 @@
       background-color: #6aa8b3;
     }
 
-    footer {
-     background-color: var(--header-color);
-     padding: 1rem;
-     display: flex;
-     justify-content: center;
-     gap: 0.75rem;  /* smaller gap since icon and text are together */
-     margin-top: 3rem;
-     align-items: center; /* vertically center icon and text */
-}
-
-
-    .footer-icon {
-      width: 24px;
-      height: 24px;
-      stroke: var(--icon-color);
-      fill: none;
-      stroke-width: 1.5;
-    }
-
-    footer div {
-      font-weight: 500;
-      color: var(--icon-color);
-      font-size: 1rem;
-    }
-
     .contact-section iframe {
       width: 100%;
       min-height: 600px;
@@ -157,36 +167,138 @@
     .contact-section p {
       color: #82c0cc;
     }
+
+    /* Footer styles */
+    footer {
+      background: var(--header-footer-color);
+      border-top: 1px solid var(--accent-color);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    footer a {
+      color: var(--text-color);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      color: var(--accent-color);
+    }
+
+    footer svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--icon-color);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    /* Mobile Responsive */
+
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+
+      /* Hide nav links by default on mobile */
+      .nav-links-wrapper {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--header-footer-color);
+        border-top: 1px solid var(--accent-color);
+        justify-content: flex-start;
+        max-width: none;
+        overflow-x: auto;
+        margin-top: 8px;
+      }
+
+      /* Show nav links when active */
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+      }
+
+      nav a {
+        padding-left: 20px;
+      }
+
+      /* Show hamburger */
+      .hamburger {
+        display: block;
+      }
+
+      main {
+        padding-top: 160px;
+      }
+
+      footer {
+        position: static;
+        padding: 15px 10px;
+        gap: 8px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="header-name">Amruta Gandhe</div>
-    <div class="nav-wrapper">
+
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      ☰
+    </button>
+
+    <div class="nav-links-wrapper" id="nav-links">
       <nav>
-        <a href="index.html">
+        <a href="index.html" aria-label="Home">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M3 12L12 3l9 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M9 21V12h6v9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Home
         </a>
-        <a href="about.html">
+        <a href="about.html" aria-label="About">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <circle cx="12" cy="7" r="4" stroke-width="1.5"/>
             <path d="M5.5 21c1.5-4 11.5-4 13 0" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
           About
         </a>
-        <a href="experience.html">
+        <a href="experience.html" aria-label="Professional Experience">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke-width="1.5"/>
             <path d="M16 3H8v4h8V3z" stroke-width="1.5"/>
           </svg>
           Professional Experience
         </a>
-        <a href="projects.html">
+        <a href="projects.html" aria-label="Project Portfolio">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/>
             <rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.5"/>
@@ -195,7 +307,7 @@
           </svg>
           Project Portfolio
         </a>
-        <a href="contact.html">
+        <a href="contact.html" aria-label="Contact">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" stroke-width="1.5"/>
             <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" stroke-width="1.5"/>
@@ -223,18 +335,26 @@
     </div>
   </main>
 
-<footer style="background-color: #AFEEEE; padding: 20px; border-top: 1px solid #ccc;">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 0.9rem; color: #333;">
-    <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn" style="display: flex; align-items: center; gap: 6px; text-decoration: none; color: inherit;">
-      <svg viewBox="0 0 24 24" width="24" height="24" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <footer>
+    <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <rect x="4" y="4" width="16" height="16" rx="2" />
         <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
       </svg>
       <span>LinkedIn</span>
     </a>
     <span>© 2025 Amruta Gandhe</span>
-  </div>
-</footer>
+  </footer>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navWrapper = document.querySelector('.nav-links-wrapper');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navWrapper.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
