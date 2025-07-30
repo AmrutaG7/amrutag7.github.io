@@ -11,6 +11,7 @@
     --card-bg: #E0FFFF;
     --primary-color: #333;
     --accent-color: #AFEEEE;
+    --header-footer-color: #AFEEEE; /* used in hamburger background */
   }
   body {
     margin: 0;
@@ -19,6 +20,7 @@
     color: var(--primary-color);
     line-height: 1.6;
     padding-bottom: 100px;
+    font-size: 16px; /* base font size */
   }
   nav {
     position: fixed;
@@ -82,6 +84,19 @@
     stroke-linejoin: round;
     stroke-linecap: round;
   }
+
+  /* Hamburger menu button - hidden by default */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+  }
+
   .hero {
     text-align: center;
     padding: 160px 20px 60px;
@@ -198,19 +213,41 @@
       flex-direction: column;
       align-items: flex-start;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
+    /* Hide nav links by default on mobile */
     .nav-links-wrapper {
-      justify-content: flex-start;
+      display: none;
+      flex-direction: column;
       width: 100%;
+      background-color: var(--header-footer-color);
+      border-top: 1px solid var(--accent-color);
+      justify-content: flex-start; /* added for good measure */
       max-width: none;
       overflow-x: auto;
     }
 
+    /* Show nav links when active */
+    .nav-links-wrapper.active {
+      display: flex;
+    }
+
+    /* Style nav list on mobile */
     nav ul {
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 15px;
-      padding-top: 10px;
+      padding: 10px 0;
+      flex-wrap: nowrap;
+      margin: 0;
+    }
+
+    .nav-links-wrapper li {
+      margin: 0.5rem 1rem;
+    }
+
+    .hamburger {
+      display: block;
     }
 
     .nav-name,
@@ -237,69 +274,77 @@
       flex-direction: column;
       gap: 10px;
     }
+
+    /* Responsive typography */
+    body {
+      font-size: 15px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    nav a {
+      font-size: 0.85rem;
+    }
+    .project-card {
+      font-size: 0.95rem;
+    }
+    footer {
+      font-size: 0.8rem;
+    }
   }
 </style>
 
 </head>
 <body>
   <nav>
-    <div class="nav-name">Amruta Gandhe</div>
-    <div class="nav-links-wrapper">
-      <ul>
-        <li>
-          <a href="index.html" aria-label="Home">
-            <svg viewBox="0 0 24 24" >
-              <path d="M3 12L12 3l9 9" />
-              <path d="M9 21V12h6v9" />
-            </svg>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="about.html" aria-label="About">
-            <svg viewBox="0 0 24 24" >
-              <circle cx="12" cy="7" r="4" />
-              <path d="M5.5 21c1.5-4 11.5-4 13 0" />
-            </svg>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="experience.html" aria-label="Professional Experience">
-            <svg viewBox="0 0 24 24" >
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-              <path d="M16 3H8v4h8V3z" />
-            </svg>
-            Professional Experience
-          </a>
-        </li>
-        <li>
-          <a href="projects.html" aria-label="Project Portfolio">
-            <svg viewBox="0 0 24 24" >
-              <rect x="3" y="3" width="7" height="7" rx="1.5" />
-              <rect x="14" y="3" width="7" height="7" rx="1.5" />
-              <rect x="14" y="14" width="7" height="7" rx="1.5" />
-              <rect x="3" y="14" width="7" height="7" rx="1.5" />
-            </svg>
-            Project Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="contact.html" aria-label="Contact">
-            <svg viewBox="0 0 24 24" >
-              <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" />
-              <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" />
-            </svg>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-spacer"></div>
-  </nav>
+  <div class="nav-name">Amruta Gandhe</div>
+
+  <button class="hamburger" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <div class="nav-links-wrapper">
+    <ul>
+      <li>
+        <a href="index.html" aria-label="Home">
+          <svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="about.html" aria-label="About">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>
+          About
+        </a>
+      </li>
+      <li>
+        <a href="experience.html" aria-label="Professional Experience">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>
+          Professional Experience
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" aria-label="Project Portfolio">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          Project Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" aria-label="Contact">
+          <svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav-spacer"></div>
+</nav>
 
   <div class="hero">
-    <!-- REMOVED the h1 "Amruta Gandhe" here as requested -->
     <p>Welcome to my Business Analytics portfolio.</p>
   </div>
 
@@ -391,5 +436,15 @@
     </div>
     <div>© Amruta Gandhe</div>
   </footer>
+  
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navWrapper = document.querySelector('.nav-links-wrapper');
+
+  hamburger.addEventListener('click', () => {
+    navWrapper.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
