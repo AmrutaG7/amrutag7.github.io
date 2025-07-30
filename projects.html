@@ -15,369 +15,403 @@
   />
 
   <style>
-    :root {
-      --bg-color: #faf9f9;
-      --primary-color: #2c3e50;
-      --secondary-color: #AFEEEE; /* Removed #f4a261 */ 
-      --header-color: #AFEEEE;
-      --accent-color: #AFEEEE;
-      --text-color: #333;
+  :root {
+    --bg-color: #faf9f9;
+    --primary-color: #2c3e50;
+    --secondary-color: #AFEEEE;
+    --header-color: #AFEEEE;
+    --accent-color: #AFEEEE;
+    --text-color: #333;
 
-      /* Pastel category colors from your home page */
-      --python-bg: #F5F5DC;
-      --python-color: #333;
+    --python-bg: #F5F5DC;
+    --python-color: #333;
 
-      --tableau-bg: #FAD6D6;;
-      --tableau-color: #2f8f7c;
+    --tableau-bg: #FAD6D6;
+    --tableau-color: #2f8f7c;
 
-      --datamining-bg: #F0F8FF;
-      --datamining-color: #d46a6a;
+    --datamining-bg: #F0F8FF;
+    --datamining-color: #d46a6a;
 
-      --dbmanagement-bg: #fcf6d7;
-      --dbmanagement-color: #3d6b35;
+    --dbmanagement-bg: #fcf6d7;
+    --dbmanagement-color: #3d6b35;
 
-      --datawarehouse-bg: #efe3ff;
-      --datawarehouse-color: #a24c80;
-    }
+    --datawarehouse-bg: #efe3ff;
+    --datawarehouse-color: #a24c80;
+  }
 
-    /* General page styles */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding-bottom: 100px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-    a:hover {
-      color: var(--secondary-color);
-    }
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--secondary-color);
+  }
 
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--header-color); /* which is #AFEEEE */
-      border-bottom: 1px solid var(--accent-color);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    .nav-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2F4F4F;
-      width: 150px; /* fixed width */
-      user-select: none;
-    }
-    
-	/* nav links wrapper centered */
-    .nav-links-wrapper {
-      flex-grow: 1;
-      max-width: 700px;
-      display: flex;
-      justify-content: center;
-    }
-    .nav-spacer {
-        width: 150px; /* same width as nav-name */
-    }
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    nav li {
-      display: flex;
-      align-items: center;
-    }
-    nav a {
-      color: #2F4F4F;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    nav a:hover {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .nav-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2F4F4F;
+    width: 150px;
+    user-select: none;
+  }
+  .nav-links-wrapper {
+    flex-grow: 1;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-spacer {
+    width: 150px;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  nav li {
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    color: #2F4F4F;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  nav a:hover {
     color: #666;
-    }
-    nav svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
+  }
+  nav svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  main.content {
+    max-width: 900px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+    flex-grow: 1;
+  }
+
+  h1 {
+    text-align: center;
+    color: #82c0cc;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .btn:hover {
+    background-color: #f4a261;
+    color: #fff;
+  }
+
+  .project-category {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+  }
+
+  .project-header {
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+  }
+
+  .project-header i.category-icon {
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+  }
+
+  .project-header.python {
+    background-color: var(--python-bg);
+    border: 1px solid var(--python-color);
+    color: var(--python-color);
+  }
+  .project-header.tableau {
+    background-color: var(--tableau-bg);
+    border: 1px solid var(--tableau-color);
+    color: var(--tableau-color);
+  }
+  .project-header.datamining {
+    background-color: var(--datamining-bg);
+    border: 1px solid var(--datamining-color);
+    color: var(--datamining-color);
+  }
+  .project-header.dbmanagement {
+    background-color: var(--dbmanagement-bg);
+    border: 1px solid var(--dbmanagement-color);
+    color: var(--dbmanagement-color);
+  }
+  .project-header.datawarehouse {
+    background-color: var(--datawarehouse-bg);
+    border: 1px solid var(--datawarehouse-color);
+    color: var(--datawarehouse-color);
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+  }
+  .project-header.active .toggle-icon {
+    transform: rotate(90deg);
+  }
+
+  .project-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 1.5rem;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--accent-color);
+  }
+  .project-content.open {
+    max-height: 3000px;
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .project-item {
+    border-bottom: 1px solid var(--accent-color);
+    padding: 1rem 0;
+  }
+  .project-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .project-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .timeframe {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .project-desc {
+    margin: 0.3rem 0 0 0;
+  }
+
+  .iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+  }
+  .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .project-item.python .project-title,
+  .project-item.python i.category-icon {
+    color: var(--python-color);
+  }
+  .project-item.tableau .project-title,
+  .project-item.tableau i.category-icon {
+    color: var(--tableau-color);
+  }
+  .project-item.datamining .project-title,
+  .project-item.datamining i.category-icon {
+    color: var(--datamining-color);
+  }
+  .project-item.dbmanagement .project-title,
+  .project-item.dbmanagement i.category-icon {
+    color: var(--dbmanagement-color);
+  }
+  .project-item.datawarehouse .project-title,
+  .project-item.datawarehouse i.category-icon {
+    color: var(--datawarehouse-color);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+  }
+
+  footer {
+    background: var(--header-color);
+    border-top: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-content .social-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .footer-content .social-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer-content .social-links svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary-color);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* 🔽 Mobile Styles: Hamburger Menu & Responsive Nav */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2F4F4F;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 1100;
     }
 
-    /* Content container */
-    main.content {
-      max-width: 900px;
-      margin: 100px auto 60px; /* account for fixed nav */
-      padding: 0 20px;
-      flex-grow: 1;
-    }
-
-    h1 {
-      text-align: center;
-      color: #82c0cc;;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Expand/Collapse Buttons */
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+    nav {
       flex-wrap: wrap;
-    }
-    .btn {
-      background-color: var(--primary-color);
-      border: none;
-      color: var(--bg-color);
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-    }
-    .btn:hover {
-      background-color: #f4a261;
-      color: #fff; /* Optional: ensures text stays readable */
-      cursor: pointer;
-    }
-
-    /* Project category container */
-    .project-category {
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      background-color: var(--bg-color);
-      border: 1px solid var(--accent-color);
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      overflow: hidden;
-    }
-
-    /* Header with toggle icon */
-    .project-header {
-      cursor: pointer;
-      padding: 1rem 1.5rem;
-      font-size: 1.3rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      user-select: none;
-      border-radius: 12px;
-      transition: background-color 0.3s ease;
-      background-color: var(--primary-color);
-      color: var(--bg-color);
     }
 
-    /* Category icon in header */
-    .project-header i.category-icon {
-      font-size: 1.6rem;
-      margin-right: 0.8rem;
-    }
-
-    /* Individual colors for icons matching home page text colors */
-    .project-header.python {
-      background-color: var(--python-bg);
-	  border: 1px solid var(--python-color);
-      color: var(--python-color);
-    }
-    .project-header.tableau {
-      background-color: var(--tableau-bg);
-	  border: 1px solid var(--tableau-color);
-      color: var(--tableau-color);
-    }
-    .project-header.datamining {
-      background-color: var(--datamining-bg);
-	  border: 1px solid var(--datamining-color);
-      color: var(--datamining-color);
-    }
-    .project-header.dbmanagement {
-      background-color: var(--dbmanagement-bg);
-	  border: 1px solid var(--dbmanagement-color);
-      color: var(--dbmanagement-color);
-    }
-    .project-header.datawarehouse {
-      background-color: var(--datawarehouse-bg);
-	  border: 1px solid var(--datawarehouse-color);
-      color: var(--datawarehouse-color);
-    }
-
-    /* Arrow toggle icon */
-    .toggle-icon {
-      transition: transform 0.3s ease;
-      font-size: 1.2rem;
-    }
-    .project-header.active .toggle-icon {
-      transform: rotate(90deg);
-    }
-
-    /* Project content hidden/shown */
-    .project-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      padding: 0 1.5rem;
-      background-color: var(--bg-color);
+    .nav-links-wrapper {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: var(--header-color);
+      padding: 10px 20px;
       border-top: 1px solid var(--accent-color);
     }
-    .project-content.open {
-      max-height: 3000px; /* big enough */
-      padding: 1rem 1.5rem 1.5rem;
-    }
 
-    /* Project item */
-    .project-item {
-      border-bottom: 1px solid var(--accent-color);
-      padding: 1rem 0;
-    }
-    .project-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    /* Project title and timeframe badge */
-    .project-title {
-      font-weight: 700;
-      font-size: 1.1rem;
+    .nav-links-wrapper.active {
       display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .timeframe {
-      background-color: var(--secondary-color);
-      color: var(--bg-color);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 2px 10px;
-      border-radius: 20px;
-      margin-left: auto;
-      white-space: nowrap;
     }
 
-    /* Project description */
-    .project-desc {
-      margin: 0.3rem 0 0 0;
-    }
-
-    /* iframe wrapper */
-    .iframe-wrapper {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 aspect */
-      margin-top: 8px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
-    }
-    .iframe-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Category-specific colors for icons and text in project items */
-    .project-item.python .project-title,
-    .project-item.python i.category-icon {
-      color: var(--python-color);
-    }
-    .project-item.tableau .project-title,
-    .project-item.tableau i.category-icon {
-      color: var(--tableau-color);
-    }
-    .project-item.datamining .project-title,
-    .project-item.datamining i.category-icon {
-      color: var(--datamining-color);
-    }
-    .project-item.dbmanagement .project-title,
-    .project-item.dbmanagement i.category-icon {
-      color: var(--dbmanagement-color);
-    }
-    .project-item.datawarehouse .project-title,
-    .project-item.datawarehouse i.category-icon {
-      color: var(--datawarehouse-color);
-    }
-	
-	.icon {
-      width: 24px;
-      height: 24px;
-      fill: var(--primary-color);
-     }
-
-    /* Footer */
-    footer {
-     background: var(--header-color); /* e.g., #AFEEEE */
-     border-top: 1px solid var(--accent-color);
-     padding: 10px 20px;
-     font-size: 0.9rem;
-     color: var(--primary-color);
-     display: flex;
-     justify-content: center;
-    }
-
-    .footer-content {
-      display: flex;
+    nav ul {
       flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      text-align: center;
-    }
-
-    .footer-content .social-links {
-      display: flex;
       gap: 15px;
+      width: 100%;
     }
 
-    .footer-content .social-links a {
-      text-decoration: none;
-      color: var(--primary-color);
-      display: flex;
-      align-items: center;
-      gap: 5px;
+    nav li {
+      width: 100%;
     }
 
-    .footer-content .social-links svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--primary-color);
-      fill: none;
-      stroke-width: 2;
+    nav a {
+      font-size: 1rem;
+      width: 100%;
+      padding: 8px 0;
     }
+  }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      main.content {
+  @media (max-width: 600px) {
+    main.content {
       margin: 80px 10px 60px;
     }
 
@@ -391,15 +425,15 @@
       font-size: 0.9rem;
     }
 
-  .footer-content {
-     flex-direction: column;
-     gap: 10px;
-     align-items: center;
-     text-align: center;
+    .footer-content {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
     }
-   }
+  }
+</style>
 
-  </style>
 </head>
 <body>
 
