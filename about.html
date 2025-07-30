@@ -24,47 +24,45 @@
       color: var(--primary-color);
       line-height: 1.6;
       padding-bottom: 100px;
+      font-size: 16px;
     }
 
-    nav {
+    /* HEADER */
+
+    header {
+      background-color: var(--nav-footer-bg);
+      border-bottom: 1px solid var(--accent-color);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background-color: var(--nav-footer-bg);
-      border-bottom: 1px solid var(--accent-color);
-      padding: 10px 20px;
       z-index: 1000;
-    }
-	
-	.nav-container {
-      max-width: 900px; 
-      margin: 0 auto;
-      position: relative;
-      display: flex;
-      justify-content: center;  
-      align-items: center;
-    }
-	
-	.nav-logo {
-	 position: fixed;
-	 left: 20px; 
-	 top: 10px;
-     font-weight: 700;
-     font-size: 1.25rem;
-     color: var(--primary-color);
-     text-decoration: none;
-     z-index: 1001;;
+      flex-wrap: wrap;
     }
 
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .header-name {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    /* Nav container for centering on desktop */
+    .nav-links-wrapper {
+      flex-grow: 1;
+      max-width: 900px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
       display: flex;
       gap: 30px;
-	  flex: 1;
-      justify-content: center;
     }
 
     nav a {
@@ -76,6 +74,7 @@
       flex-direction: column;
       align-items: center;
       gap: 4px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -91,31 +90,31 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-	
-	/* Glow effect for yellow lightbulb icon */
-   .glowing-icon {
-     color: #FFD700; /* bright yellow */
-     text-shadow: 
-     0 0 5px #FFD700,  /* soft yellow glow */
-     0 0 10px #FFA500, /* orange glow for warmth */
-     0 0 15px #FFD700; /* extended glow */
-    animation: glowPulse 1.5s ease-in-out infinite alternate;
-}
 
-@keyframes glowPulse {
-  from {
-    text-shadow: 
-      0 0 3px #FFD700,
-      0 0 6px #FFA500,
-      0 0 12px #FFD700;
-  }
-  to {
-    text-shadow: 
-      0 0 8px #FFD700,
-      0 0 14px #FFA500,
-      0 0 20px #FFD700;
-  }
-}
+    /* Glow effect for yellow lightbulb icon */
+    .glowing-icon {
+      color: #FFD700; /* bright yellow */
+      text-shadow: 
+        0 0 5px #FFD700,  
+        0 0 10px #FFA500, 
+        0 0 15px #FFD700;
+      animation: glowPulse 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from {
+        text-shadow: 
+          0 0 3px #FFD700,
+          0 0 6px #FFA500,
+          0 0 12px #FFD700;
+      }
+      to {
+        text-shadow: 
+          0 0 8px #FFD700,
+          0 0 14px #FFA500,
+          0 0 20px #FFD700;
+      }
+    }
 
     main {
       max-width: 900px;
@@ -190,6 +189,8 @@
       color: var(--primary-color);
     }
 
+    /* FOOTER */
+
     footer {
       background-color: var(--nav-footer-bg);
       border-top: 1px solid var(--accent-color);
@@ -206,6 +207,7 @@
       align-items: center;
       gap: 15px;
       flex-wrap: wrap;
+      user-select: none;
     }
 
     footer a {
@@ -232,75 +234,134 @@
       color: #6c63ff;
     }
 
+    /* Hamburger menu button - hidden on desktop */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      cursor: pointer;
+      padding: 10px;
+      margin-left: auto;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+
+      /* Hide nav links by default on mobile */
+      .nav-links-wrapper {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--nav-footer-bg);
+        border-top: 1px solid var(--accent-color);
+        justify-content: flex-start;
+        max-width: none;
+        overflow-x: auto;
+        margin-top: 8px;
+      }
+
+      /* Show nav links when active */
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+      }
+
+      nav a {
+        padding-left: 20px;
+      }
+
+      /* Show hamburger */
+      .hamburger {
+        display: block;
+      }
+
+      main {
+        padding-top: 160px;
+      }
+
+      footer {
+        position: static;
+        padding: 15px 10px;
+        gap: 8px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo">Amruta Gandhe</a>
-  <div class="nav-container">
-    <ul>
-      <li>
-        <a href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 12L12 3l9 9"/>
-            <path d="M9 21V12h6v9"/>
-          </svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="about.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="7" r="4"/>
-            <path d="M5.5 21c1.5-4 11.5-4 13 0"/>
-          </svg>
-          About
-        </a>
-      </li>
-      <li>
-        <a href="experience.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-            <path d="M16 3H8v4h8V3z"/>
-          </svg>
-          Professional Experience
-        </a>
-      </li>
-      <li>
-        <a href="projects.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-          </svg>
-          Project Portfolio
-        </a>
-      </li>
-      <li>
-        <a href="contact.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/>
-            <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/>
-          </svg>
-          Contact
-        </a>
-      </li>
-    </ul>
+<header>
+  <div class="header-name">Amruta Gandhe</div>
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    ☰
+  </button>
+
+  <div class="nav-links-wrapper" id="nav-links">
+    <nav>
+      <a href="index.html" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12L12 3l9 9"/>
+          <path d="M9 21V12h6v9"/>
+        </svg>
+        Home
+      </a>
+      <a href="about.html" aria-label="About">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="7" r="4"/>
+          <path d="M5.5 21c1.5-4 11.5-4 13 0"/>
+        </svg>
+        About
+      </a>
+      <a href="experience.html" aria-label="Professional Experience">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 3H8v4h8V3z"/>
+        </svg>
+        Professional Experience
+      </a>
+      <a href="projects.html" aria-label="Project Portfolio">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+        </svg>
+        Project Portfolio
+      </a>
+      <a href="contact.html" aria-label="Contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/>
+          <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/>
+        </svg>
+        Contact
+      </a>
+    </nav>
   </div>
-</nav>
+</header>
 
 <main>
   <img src="assets/profile.jpg" alt="Amruta Gandhe" class="profile-pic" />
   <h1 class="hero">
-  <i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe
-</h1>
-</h1>
+    <i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe
+  </h1>
   <p style="text-align: center; color: #82c0cc;"><strong>Data Analytics &amp; BI | Data Strategy &amp; Omnichannel Insights | SQL • Tableau | Cloud: Snowflake</strong></p>
 
   <section class="bio">
-   <h2 class="section-title">👩‍💻 About Me</h2>
+    <h2 class="section-title">👩‍💻 About Me</h2>
     <p>
       My Journey Into Data Analytics<br><br>
       I began my career with a strong foundation in business and management, earning a Post Graduate Diploma in Management Studies. Early in my journey, I recognized the value of data in shaping effective business decisions, which sparked my interest in analytics. 
@@ -324,7 +385,7 @@
   </section>
 
   <section class="certifications">
-   <h2 class="section-title">🏅 Certifications & Publications</h2>
+    <h2 class="section-title">🏅 Certifications & Publications</h2>
     <ul>
       <li>SAS Certified Base Programmer for SAS 9.0</li>
       <li><em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>, Dec 2022</li>
@@ -332,7 +393,7 @@
   </section>
 
   <section class="projects">
-   <h2 class="section-title">🗂️ Projects</h2>
+    <h2 class="section-title">🗂️ Projects</h2>
     <p>Explore my work on the <a href="projects.html">Project Portfolio page</a>.</p>
   </section>
 
@@ -361,6 +422,17 @@
   </a>
   <div>© Amruta Gandhe</div>
 </footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navWrapper = document.querySelector('.nav-links-wrapper');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navWrapper.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
