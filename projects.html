@@ -3,576 +3,347 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - Amruta Gandhe</title>
+  <title>Project Portfolio - Amruta Gandhe</title>
 
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-papb3QKJ9X2XQ7tGzq3lV8kZQ9fU6Qtmrq/N2P5yfL6Lsp6u+7O9aSOTc7R0V4xj5cg6+o1VnjYlfKN3kf0Kzw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- Font Awesome or any icon CDN if needed -->
 
- <style>
-  :root {
-    --primary-color: #2F4F4F;
-    --accent-color: #82c0cc;
-    --bg-color: #faf9f9;
-    --header-color: #AFEEEE;
-    --tile-color: #ffffff;
-    --tile-border: #ccc;
-  }
+  <style>
+    :root {
+      --bg-color: #faf9f9;
+      --primary-color: #2c3e50;
+      --secondary-color: #AFEEEE;
+      --header-color: #AFEEEE;
+      --accent-color: #AFEEEE;
+      --text-color: #333;
 
-  body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    font-size: 1rem;
-    letter-spacing: 0.2px;
-  }
+      --python-bg: #F5F5DC;
+      --python-color: #333;
 
-  header, nav {
-    background-color: var(--header-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+      --tableau-bg: #FAD6D6;
+      --tableau-color: #2f8f7c;
 
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-  }
+      --datamining-bg: #F0F8FF;
+      --datamining-color: #d46a6a;
 
-  nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 1rem;
-  }
+      --dbmanagement-bg: #fcf6d7;
+      --dbmanagement-color: #3d6b35;
 
-  nav svg {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: var(--primary-color);
-    stroke-width: 2;
-  }
-
-  .nav-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-
-  .nav-spacer {
-    flex-grow: 1;
-  }
-
-  .content {
-    padding: 100px 20px 40px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  h1 {
-    color: var(--accent-color);
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-
-  .description {
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-
-  .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  .category-tile {
-    background-color: var(--tile-color);
-    border: 1px solid var(--tile-border);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    color: var(--primary-color);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  .category-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .category-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .category-title {
-    font-size: 1.15rem;
-    font-weight: 600;
-  }
-
-  .python { background-color: #FFE4E1; }
-  .tableau { background-color: #E6E6FA; }
-  .datamining { background-color: #E0FFFF; }
-  .statistics { background-color: #FFFACD; }
-  .database { background-color: #F0FFF0; }
-  .datawarehouse { background-color: #F5F5DC; }
-  .predictive { background-color: #FDEBD0; }
-
-  footer {
-    background-color: var(--header-color);
-    border-top: 1px solid var(--accent-color);
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .social-links a {
-    margin: 0 10px;
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-
-  .social-links svg {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: var(--primary-color);
-    stroke-width: 2;
-    vertical-align: middle;
-  }
-
-  /* Hamburger Menu */
-  .hamburger {
-    display: none;
-    font-size: 1.6rem;
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    cursor: pointer;
-  }
-
-  /* Mobile Nav */
-  @media (max-width: 768px) {
-    .nav-links-wrapper {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: var(--header-color);
-      padding: 1rem 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 999;
+      --datawarehouse-bg: #efe3ff;
+      --datawarehouse-color: #a24c80;
     }
 
-    .nav-links-wrapper.active {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-bottom: 100px;
+      min-height: 100vh;
       display: flex;
-    }
-
-    .hamburger {
-      display: block;
+      flex-direction: column;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
     }
 
     nav {
-      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--header-color);
+      border-bottom: 1px solid var(--accent-color);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
 
-    nav ul {
-      flex-direction: column;
-      gap: 20px;
-      padding: 0 20px;
+    .nav-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2F4F4F;
+      width: 150px;
+      user-select: none;
+    }
+
+    .nav-links-wrapper {
+      flex-grow: 1;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
     }
 
     .nav-spacer {
-      display: none;
+      width: 150px;
     }
-  }
-</style>
 
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav li {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #2F4F4F;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      color: #666;
+    }
+
+    nav svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #2F4F4F;
+    }
+
+    main.content {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #82c0cc;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    /* Category grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .category-tile {
+      background-color: var(--bg-color);
+      border: 1px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .category-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    }
+
+    .category-icon {
+      font-size: 2.4rem;
+      color: inherit;
+    }
+
+    .category-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    /* Pastel backgrounds per category */
+    .python { background-color: var(--python-bg); color: var(--python-color); }
+    .tableau { background-color: var(--tableau-bg); color: var(--tableau-color); }
+    .datamining { background-color: var(--datamining-bg); color: var(--datamining-color); }
+    .statistics { background-color: #fff0f5; color: #d46a6a; }
+    .database { background-color: var(--dbmanagement-bg); color: var(--dbmanagement-color); }
+    .datawarehouse { background-color: var(--datawarehouse-bg); color: var(--datawarehouse-color); }
+    .predictive { background-color: #f0f8ff; color: #5a5a5a; }
+
+    footer {
+      background: var(--header-color);
+      border-top: 1px solid var(--accent-color);
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      color: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .social-links svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--primary-color);
+      stroke-width: 2;
+      vertical-align: middle;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links-wrapper {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--header-color);
+        padding: 1rem 0;
+        border-top: 1px solid var(--accent-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .nav-spacer {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <nav>
+<nav>
   <div class="nav-name">Amruta Gandhe</div>
-
-  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    ☰
-  </button>
-
-  <div class="nav-links-wrapper" id="nav-links">
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <div class="nav-spacer"></div>
+  <div class="nav-links-wrapper">
     <ul>
-      <li>
-        <a href="index.html" aria-label="Home">
-          <svg viewBox="0 0 24 24">
-            <path d="M3 12L12 3l9 9" />
-            <path d="M9 21V12h6v9" />
-          </svg>
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="about.html" aria-label="About">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="7" r="4" />
-            <path d="M5.5 21c1.5-4 11.5-4 13 0" />
-          </svg>
-          About
-        </a>
-      </li>
-      <li>
-        <a href="experience.html" aria-label="Professional Experience">
-          <svg viewBox="0 0 24 24">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-            <path d="M16 3H8v4h8V3z" />
-          </svg>
-          Professional Experience
-        </a>
-      </li>
-      <li>
-        <a href="projects.html" aria-label="Project Portfolio">
-          <svg viewBox="0 0 24 24">
-            <rect x="3" y="3" width="7" height="7" rx="1.5" />
-            <rect x="14" y="3" width="7" height="7" rx="1.5" />
-            <rect x="14" y="14" width="7" height="7" rx="1.5" />
-            <rect x="3" y="14" width="7" height="7" rx="1.5" />
-          </svg>
-          Project Portfolio
-        </a>
-      </li>
-      <li>
-        <a href="contact.html" aria-label="Contact">
-          <svg viewBox="0 0 24 24">
-            <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5" />
-            <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z" />
-          </svg>
-          Contact
-        </a>
-      </li>
+      <li><a href="index.html" aria-label="Home">
+        <svg viewBox="0 0 24 24" ><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>Home</a></li>
+      <li><a href="about.html" aria-label="About">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>About</a></li>
+      <li><a href="experience.html" aria-label="Professional Experience">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>Professional Experience</a></li>
+      <li><a href="projects.html" aria-label="Project Portfolio">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>Project Portfolio</a></li>
+      <li><a href="contact.html" aria-label="Contact">
+        <svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>Contact</a></li>
     </ul>
   </div>
-
-  <div class="nav-spacer"></div>
 </nav>
 
-
-  <main class="content" role="main">
-    <h1>Projects</h1>	
-	<p class="description">
-      A curated portfolio of academic and applied projects completed throughout my Master of Science at the University of North Texas, reflecting a strong foundation in data analysis and practical application..
-    </p>
-
-    <div class="controls">
-      <button id="expandAllBtn" class="btn" aria-label="Expand all projects"><i class="fas fa-plus-square"></i> Expand All</button>
-      <button id="collapseAllBtn" class="btn" aria-label="Collapse all projects"><i class="fas fa-minus-square"></i> Collapse All</button>
-    </div>
-
-    <!-- Tableau Projects -->
-    <section class="project-category" data-category="tableau" aria-expanded="false" tabindex="0">
-      <header class="project-header tableau" role="button" aria-controls="tableau-content" aria-expanded="false" tabindex="0">
-        <span><i class="fas fa-chart-bar category-icon"></i> Tableau Dashboards</span>
-        <i class="fas fa-chevron-right toggle-icon"></i>
-      </header>
-      <div id="tableau-content" class="project-content" hidden>
-        <article class="project-item tableau">
-          <div class="project-title">
-            Police Arrests in Dallas, Texas - Tableau Report
-            <span class="timeframe" aria-label="Timeframe">May 2020 - June 2020</span>
-          </div>
-          <p class="project-desc">Tableau 2019.4 was used to study the police arrests in different areas of Texas that have maximum police arrests from the year 2014 to Spring 2020 and to gain understanding of different locations and time susceptible to crime.
-		   This report focused on visualization of police arrests in different areas of Texas , including dashboards and story during the years 2014 to Spring 2020.</p>
-          <p>
-            <a href="https://public.tableau.com/app/profile/amruta.gandhe/viz/Project_Amruta_Gandhe/Figure1-YearwiseArrestTrend" target="_blank" rel="noopener noreferrer">
-              Visit Police Arrests Dashboard
-            </a>
-          </p>
-		  <div class="iframe-wrapper" style="margin-top: 1em;">
-		<iframe src="https://amrutag7.github.io/reports/tableau/tableau-report1.html" title="Police Arrests Tableau Report" width="100%" height="800px" style="border: none;">
-		</iframe>
-		</div>
-
-        </article>
-
-        <article class="project-item tableau">
-          <div class="project-title">My Tableau Public Profile</div>
-          <p class="project-desc">Explore more dashboards and visualizations on my Tableau Public profile.</p>
-          <p>
-            <a href="https://public.tableau.com/app/profile/amruta.gandhe/vizzes" target="_blank" rel="noopener noreferrer">
-              Visit Tableau Public Profile
-            </a>
-          </p>
-        </article>
-      </div>
-    </section>
-	
-	 <!-- Database Management -->
-    <section class="project-category" data-category="dbmanagement" aria-expanded="false" tabindex="0">
-      <header class="project-header dbmanagement" role="button" aria-controls="dbmanagement-content" aria-expanded="false" tabindex="0">
-        <span><i class="fas fa-server category-icon"></i> Database Management/SQL </span>
-        <i class="fas fa-chevron-right toggle-icon"></i>
-      </header>
-      <div id="dbmanagement-content" class="project-content" hidden>
-        <article class="project-item dbmanagement">
-          <div class="project-title">
-            Designed a relational database for a consulting firm capturing details of the ongoing projects.
-            <span class="timeframe" aria-label="Timeframe">Jan 2021 - Apr 2021</span>
-          </div>
-          <p class="project-desc">SR Consulting (SRC) is a firm that creates custom software for its clients. 
-		  When a client comes to SRC about a job, the managers at SRC determine the staffing needs in terms of the number of consultants needed and the required skills of the consultants. 
-		  They then locate the available consultants with the necessary skills and assign them to the project. One of the consultants is assigned to be the project manager. 
-		  When the project is completed the project manager evaluates all of the other consultants who worked on the project, and all of the project consultants evaluate the project manager. A project can be subdivided into multiple projects.
-		  Technical Specifications:
-		  1. Designed an ER diagram using Forward Engineering in MySQL workbench by analyzing the requirements to identify business rules, entities and relationship. 
-		  2. Created a database with Oracle APEX based on the logical design by writing SQL queries for creating tables and inserting records. 
-		  3. Developed SQL queries to pull out the data from the database for tracking number of projects, consultants assigned to projects, calculating the number of hours spent on particular projects, etc.
-		  </p>
-          <div class="iframe-wrapper">
-            <iframe src="https://amrutag7.github.io/reports/databasemanagement/databasemanagement-report1.html" aria-label="Database management report"></iframe>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Data Warehouse -->
-    <section class="project-category" data-category="datawarehouse" aria-expanded="false" tabindex="0">
-      <header class="project-header datawarehouse" role="button" aria-controls="datawarehouse-content" aria-expanded="false" tabindex="0">
-        <span><i class="fas fa-warehouse category-icon"></i> Data Warehouse</span>
-        <i class="fas fa-chevron-right toggle-icon"></i>
-      </header>
-      <div id="datawarehouse-content" class="project-content" hidden>
-        <article class="project-item datawarehouse">
-          <div class="project-title">
-            Designed a relational database for online portal (Fiverr) and generated frontend , backend in QlikView and Tableau
-            <span class="timeframe" aria-label="Timeframe">Mar 2021 - Jun 2021</span>
-          </div>
-          <p class="project-desc">. Designed an ER Model and Dimensional Model using Forward Engineering in MySQL workbench for an online portal (Fiverr). 
-		  MySQL workbench was connected to BI tools QlikView and Tableau to build dashboards / reporting and data was visualized for capturing customer and sales details.</p>
-          <div class="iframe-wrapper">
-            <iframe src="https://amrutag7.github.io/reports/datawarehouse/datawarehouse-report1.html" aria-label="Data warehouse report"></iframe>
-          </div>
-		  <p>
-            <a href="https://public.tableau.com/app/profile/amruta.gandhe/viz/Tableau-Fiverr_AG/Dashboard-Fiverr_AG" target="_blank" rel="noopener noreferrer">
-              Fiverr Dashboard
-            </a>
-        </article>
-		
-	  <article class="project-item datawarehouse">
-          <div class="project-title">
-            Logical Data Model of Amazon Cell Phone Reviews
-            <span class="timeframe" aria-label="Timeframe">Feb 2022 – March 2022</span>
-          </div>
-          <p class="project-desc">
-          Created a logical data model for Amazon Cell Phone Reviews. Backend in Tableau
-          </p>
-          <div class="iframe-wrapper">
-            <iframe src="https://amrutag7.github.io/reports/datawarehouse/datawarehouse-report1.html"aria-label="Data warehouse report on Amazon cell phone reviews"> </iframe>
-          </div>
-           <p>
-          <a href="https://public.tableau.com/app/profile/amruta.gandhe/viz/ProjectPhase3-AmazonCellPhoneReviews-ByAmrutaGandhe/Title"
-          target="_blank" rel="noopener noreferrer">
-          Amazon Cell Phone Reviews
-          </a>
-          </p>
-          </article>
-
-          </div>
-          </section>
-	
-	 <!-- Python Projects -->
-    <section class="project-category" data-category="python" aria-expanded="false" tabindex="0">
-      <header class="project-header python" role="button" aria-controls="python-content" aria-expanded="false" tabindex="0">
-        <span><i class="fab fa-python category-icon"></i> Python Projects</span>
-        <i class="fas fa-chevron-right toggle-icon"></i>
-      </header>
-      <div id="python-content" class="project-content" hidden>
-        <article class="project-item python">
-          <div class="project-title">
-            Loan analysis of crowd funding platform Kiva.org using Python
-            <span class="timeframe" aria-label="Timeframe">Sept 2021 - Dec 2021</span>
-          </div>
-          <p class="project-desc">Kiva.org is a 501(c)(3) non-profit based in San Francisco, dedicated to expanding financial access by connecting underserved entrepreneurs and students with lenders through online microfinance. 
-		  Borrowers submit loan applications that require funding before expiration, following approval by the organization.
-		  The goal of this project was to identify key factors influencing loan repayment and to predict whether a loan application would be funded. 
-		  Logistic Regression and Decision Tree classifiers were developed, trained, and evaluated using K-fold cross-validation, classification reports, and confusion matrices. 
-		  The Decision Tree model demonstrated superior performance.
-		  </p>
-          <div class="iframe-wrapper">
-            <iframe src="https://amrutag7.github.io/reports/python/python-report1.html"aria-label="Loan analysis report"></iframe>
-          </div>
-        </article>
-
-        <article class="project-item python">
-          <div class="project-title">
-            Walmart Sales Forecasting using Python
-            <span class="timeframe" aria-label="Timeframe">Oct 2021</span>
-          </div>
-          <p class="project-desc">Walmart Sales Forecasting: Implemented and compared ML models (XGBoost, Random Forest, Linear Regression) to predict weekly sales using Kaggle data.</p>
-          <div class="iframe-wrapper">
-            <iframe src="https://docs.google.com/viewer?url=https://amrutag7.github.io/reports/python/python-report2.pdf&embedded=true"aria-label="Walmart sales forecasting report"></iframe>
-          </div>
-        </article>
-
-        <article class="project-item python">
-          <div class="project-title">
-            Loan Analysis: Understanding The Client And Business using Python
-            <span class="timeframe" aria-label="Timeframe">May 2020 - June 2020</span>
-          </div>
-          <p class="project-desc"> A second hand dataset from Kaggle was used to analyze loan behavior using logistic regression.
-		  Machine learning model was trained to predict loan repayment.
-		  To determine the loan eligibility criteria, bank adds weightage for parameters collected from sources such as customers, credit rating agencies, to understand their impact in the final decision making process. Banks use this information to check if an applicant is eligible for loan.
-		  To get better result, two weightage list were created .Model 1 and Model 2 tables had some parameters that a bank collects, in their order of priority, along with the granted weightage and and models were developed on each of them. 
-		  Process Maps were developed for both models (model 1 and model 2).
-		  Machine Learning model was evaluated via K-fold classification technique, confusion matrix and correlation matrix. Feature Importance was performed to identify the most useful features in the dataset.
-		  By comparing these different models' output , important parameter / factors for loan approval decision making process was determined.
-		  .</p>
-          <div class="iframe-wrapper">
-            <iframe src="https://docs.google.com/viewer?url=https://amrutag7.github.io/reports/python/python-report3.pdf&embedded=true" aria-label="Loan analysis client and business report"></iframe>
-          </div>
-        </article>
-      </div>
-    </section>
-
-
-    <!-- Data Mining -->
-    <section class="project-category" data-category="datamining" aria-expanded="false" tabindex="0">
-      <header class="project-header datamining" role="button" aria-controls="datamining-content" aria-expanded="false" tabindex="0">
-        <span><i class="fas fa-database category-icon"></i> Data Mining</span>
-        <i class="fas fa-chevron-right toggle-icon"></i>
-      </header>
-      <div id="datamining-content" class="project-content" hidden>
-        <article class="project-item datamining">
-          <div class="project-title">
-            Prediction of New Car Prices Using SAS Enterprise Miner 15.1
-            <span class="timeframe" aria-label="Timeframe">Sept 2020 - Dec 2020</span>
-          </div>
-          <p class="project-desc">Data Mining was done using SAS Enterprise Miner to develop machine learning techniques like linear regression, decision tree, random forest 
-		  and gradient boost algorithms were used to predict car prices.</p>
-          <div class="iframe-wrapper">
-            <iframe src="https://amrutag7.github.io/reports/datamining/datamining-report1.html" aria-label="Data mining report"></iframe>
-          </div>
-        </article>
-      </div>
-    </section>
-
-
-  </main>
-
-  <footer>
-  <div class="footer-content">
-    <div class="social-links">
-      <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4z" />
-          <path d="M4 4l8 8 8-8" />
-        </svg>
-        <span>Email</span>
-      </a>
-      <a class="linkedin-icon" href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-    </div>
-    <div>© Amruta Gandhe</div>
-  </div> <!
-  </footer>
-
-
-  <script>
-    // Toggle project categories
-    document.querySelectorAll('.project-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const isOpen = content.classList.contains('open');
-
-        if (isOpen) {
-          content.classList.remove('open');
-          content.hidden = true;
-          header.setAttribute('aria-expanded', 'false');
-          header.parentElement.setAttribute('aria-expanded', 'false');
-          header.classList.remove('active');
-        } else {
-          content.classList.add('open');
-          content.hidden = false;
-          header.setAttribute('aria-expanded', 'true');
-          header.parentElement.setAttribute('aria-expanded', 'true');
-          header.classList.add('active');
-        }
-      });
-
-      // Keyboard accessibility: toggle on Enter or Space
-      header.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          header.click();
-        }
-      });
-    });
-
-    // Expand all / Collapse all buttons
-    document.getElementById('expandAllBtn').addEventListener('click', () => {
-      document.querySelectorAll('.project-content').forEach(content => {
-        content.classList.add('open');
-        content.hidden = false;
-      });
-      document.querySelectorAll('.project-header').forEach(header => {
-        header.setAttribute('aria-expanded', 'true');
-        header.parentElement.setAttribute('aria-expanded', 'true');
-        header.classList.add('active');
-      });
-    });
-    document.getElementById('collapseAllBtn').addEventListener('click', () => {
-      document.querySelectorAll('.project-content').forEach(content => {
-        content.classList.remove('open');
-        content.hidden = true;
-      });
-      document.querySelectorAll('.project-header').forEach(header => {
-        header.setAttribute('aria-expanded', 'false');
-        header.parentElement.setAttribute('aria-expanded', 'false');
-        header.classList.remove('active');
-      });
-    });
-  </script>
+<main class="content" role="main">
+  <h1>Project Portfolio</h1>
+  <p class="description">
+    A curated portfolio of academic and applied projects completed throughout my Master of Science at the University of North Texas, reflecting a strong foundation in data analysis and practical application.
+  </p>
   
-  <script>
+  <div class="category-grid">
+    <a href="python.html" class="category-tile python" aria-label="Python Projects">
+      <div class="category-icon">🐍</div>
+      <div class="category-title">Python Projects</div>
+    </a>
+    <a href="tableau.html" class="category-tile tableau" aria-label="Tableau Projects">
+      <div class="category-icon">📊</div>
+      <div class="category-title">Tableau Projects</div>
+    </a>
+    <a href="datamining.html" class="category-tile datamining" aria-label="Data Mining Projects">
+      <div class="category-icon">🔍</div>
+      <div class="category-title">Data Mining</div>
+    </a>
+    <a href="statistics.html" class="category-tile statistics" aria-label="Business Statistics Projects">
+      <div class="category-icon">📈</div>
+      <div class="category-title">Business Statistics</div>
+    </a>
+    <a href="database.html" class="category-tile database" aria-label="Database Management Projects">
+      <div class="category-icon">💾</div>
+      <div class="category-title">Database Management</div>
+    </a>
+    <a href="datawarehouse.html" class="category-tile datawarehouse" aria-label="Data Warehouse Projects">
+      <div class="category-icon">🏢</div>
+      <div class="category-title">Data Warehouse</div>
+    </a>
+    <a href="predictive.html" class="category-tile predictive" aria-label="Predictive Analytics Projects">
+      <div class="category-icon">🔮</div>
+      <div class="category-title">Predictive Analytics</div>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+      asgandhe@hotmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/amruta-gandhe" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+</footer>
+
+<script>
   const hamburger = document.querySelector('.hamburger');
-  const navLinksWrapper = document.getElementById('nav-links');
+  const navLinksWrapper = document.querySelector('.nav-links-wrapper');
 
   hamburger.addEventListener('click', () => {
-    const isOpen = navLinksWrapper.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
+    navLinksWrapper.classList.toggle('active');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
   });
- </script>
+</script>
 
 </body>
 </html>
