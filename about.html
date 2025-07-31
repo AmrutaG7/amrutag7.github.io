@@ -299,7 +299,26 @@
       body {
         font-size: 15px;
       }
+    
+	.publication-link {
+      color: #006699;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
+
+    .publication-link:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .publication-link .icon {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+   }	
   </style>
 </head>
 <body>
@@ -388,7 +407,17 @@
     <h2 class="section-title">🏅 Certifications & Publications</h2>
     <ul>
       <li>SAS Certified Base Programmer for SAS 9.0</li>
-      <li><em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>, Dec 2022</li>
+      <li>
+       <a href="https://ieeexplore.ieee.org/abstract/document/10216390" target="_blank" rel="noopener" class="publication-link" title="View publication on IEEE Xplore">
+        <em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+         <path d="M14 3h7v7" />
+         <path d="M10 14L21 3" />
+         <path d="M5 5h14v14H5z" />
+        </svg>
+       </a>, Dec 2022
+      </li>
+
     </ul>
   </section>
 
