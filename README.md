@@ -5,7 +5,7 @@ https://amrutag7.github.io
 
 ## About Me
 
-I am a data-driven analytics professional with experience across banking, healthcare, pharmaceuticals, and consumer goods. I leverage SQL, Python, Tableau, Power BI, Snowflake, and cloud analytics to deliver dashboards, KPIs, and actionable insights that drive business decisions.
+I am a business analytics professional with experience across banking, healthcare, pharmaceuticals, and consumer goods. I leverage SQL, Python, Tableau, Power BI, Snowflake, and cloud analytics to deliver dashboards, KPIs, and actionable insights that drive business decisions. I combine technical expertise with business acumen to support leadership, product, marketing, and operations teams in solving real-world challenges.
 
 ## Portfolio Sections
 
