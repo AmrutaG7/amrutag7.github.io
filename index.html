@@ -74,14 +74,6 @@
     gap: 6px;
   }
 
-  nav svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.5;
-  }
-
   .hamburger {
     display: none;
     font-size: 1.8rem;
@@ -91,16 +83,20 @@
     margin-left: auto;
   }
 
-  /* ===== TOP IMAGE (INDEX ONLY) ===== */
+  /* ===== TOP HERO IMAGE ===== */
   .top-image {
-    margin-top: 70px;
+    margin-top: 70px; /* offset for navbar */
     width: 100%;
+    height: 360px; /* fixed hero height */
+    overflow: hidden;
   }
 
   .top-image img {
     width: 100%;
-    height: auto;
-    display: block;  
+    height: 100%;
+    object-fit: cover;       /* fill and crop safely */
+    object-position: center; /* focus on center */
+    display: block;
   }
 
   .hero {
@@ -156,7 +152,7 @@
   }
 
   @media (max-width: 768px) {
-    .top-image img {
+    .top-image {
       height: 220px;
     }
 
@@ -190,7 +186,7 @@
   <div class="nav-spacer"></div>
 </nav>
 
-<!-- ===== TOP IMAGE ===== -->
+<!-- ===== HERO / COVER IMAGE ===== -->
 <div class="top-image">
   <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
 </div>
