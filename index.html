@@ -19,7 +19,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--primary-color);
-      line-height: 1.6;
+      line-height: 1.5;
       padding-bottom: 100px;
       font-size: 16px;
     }
@@ -101,7 +101,7 @@
     .top-image {
       margin-top: 70px;
       width: 100%;
-      height: 300px; /* fixed height for cover photo effect */
+      height: 300px; /* desktop cover */
       overflow: hidden;
       position: relative;
     }
@@ -116,7 +116,8 @@
 
     .hero {
       text-align: center;
-      padding: 20px 20px; /* reduced padding */
+      padding: 10px 20px; /* reduced padding */
+      margin-bottom: 10px; /* minimal gap to next section */
     }
 
     .hero p {
@@ -125,11 +126,21 @@
     }
 
     #experience {
-      margin-top: 15px; /* closer to hero */
       text-align: center;
       max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 10px; /* small bottom margin */
+      padding: 0 10px;
+    }
+
+    #experience h2 {
+      color: #82c0cc;
+      margin-bottom: 8px; /* reduced */
+      font-size: 1.8rem;
+    }
+
+    #experience p {
+      margin: 0 0 15px 0; /* reduced vertical space */
+      line-height: 1.4;
     }
 
     .project-grid {
@@ -137,22 +148,22 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 40px 20px;
+      padding: 20px 20px; /* reduced */
       max-width: 1000px;
-      margin: 0 auto 60px;
+      margin: 0 auto 30px; /* reduced bottom margin */
     }
 
     .project-card {
       flex: 1 1 140px;
       max-width: 160px;
-      padding: 20px;
+      padding: 15px;
       border-radius: 12px;
       font-weight: 600;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
@@ -183,6 +194,7 @@
 
       .project-grid {
         flex-direction: column;
+        gap: 15px;
       }
 
       footer {
@@ -191,7 +203,7 @@
 
       nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
       }
     }
   </style>
@@ -247,10 +259,8 @@
   </div>
 
   <section id="experience">
-    <h2 style="color:#82c0cc;">Professional Experience</h2>
-    <p>
-      Versatile Data & Analytics Professional with experience leading in data-driven initiatives across banking, healthcare, and supply chain sectors.
-    </p>
+    <h2>Professional Experience</h2>
+    <p>Versatile Data & Analytics Professional with experience leading in data-driven initiatives across banking, healthcare, and supply chain sectors.</p>
   </section>
 
   <div class="project-grid">
