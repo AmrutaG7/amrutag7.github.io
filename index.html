@@ -5,335 +5,331 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home - Amruta Gandhe</title>
   <style>
-    :root {
-      --bg-color: #faf9f9;
-      --header-color: #AFEEEE;
-      --card-bg: #E0FFFF;
-      --primary-color: #333;
-      --accent-color: #AFEEEE;
-      --header-footer-color: #AFEEEE;
-    }
+  :root {
+    --bg-color: #faf9f9;
+    --header-color: #AFEEEE;
+    --card-bg: #E0FFFF;
+    --primary-color: #333;
+    --accent-color: #AFEEEE;
+    --header-footer-color: #AFEEEE;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--primary-color);
-      line-height: 1.5;
-      padding-bottom: 100px;
-      font-size: 16px;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding-bottom: 100px;
+    font-size: 16px;
+  }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--header-color);
-      border-bottom: 1px solid var(--accent-color);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--header-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
 
-    .nav-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2F4F4F;
-    }
+  .nav-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2F4F4F;
+    width: 150px;
+    user-select: none;
+  }
 
-    .nav-links-wrapper {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
+  .nav-links-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
 
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
 
-    nav li {
-      display: flex;
-      align-items: center;
-    }
+  nav li {
+    display: flex;
+    align-items: center;
+  }
 
-    nav a {
-      color: #2F4F4F;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.3s ease;
-    }
+  nav a {
+    color: #2F4F4F;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 
-    nav a:hover {
-      color: #666;
-    }
+  nav a:hover { color: #666; }
 
-    nav svg {
-      width: 20px;
-      height: 20px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
+  nav svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
 
-    .hamburger {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-left: auto;
-    }
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
 
-    /* ===== TOP IMAGE ===== */
-    .top-image {
-      margin-top: 70px;
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-    }
+  /* ===== TOP IMAGE / BANNER ===== */
+  .top-image {
+    margin-top: 70px; /* below navbar */
+    width: 100%;
+    height: 300px; /* banner height desktop */
+    overflow: hidden;
+  }
 
-    .top-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      max-width: none; /* remove any limiting width */
-    }
+  .top-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
 
-    .hero {
-      text-align: center;
-      padding: 20px 20px 40px 20px;
-      margin-top: 0;
-    }
+  /* ===== HERO ===== */
+  .hero {
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin: 0;
-    }
+  .hero p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
 
-    #experience {
-      text-align: center;
-      max-width: 900px;
-      margin: 10px auto;
-      padding: 0 10px;
-    }
+  /* ===== PROJECT GRID ===== */
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+  }
 
-    #experience h2 {
-      color: #82c0cc;
-      margin-bottom: 8px;
-      font-size: 1.8rem;
-    }
+  .project-card {
+    flex: 1 1 140px;
+    max-width: 160px;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
 
-    #experience p {
-      margin: 0 0 15px 0;
-      line-height: 1.4;
-    }
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
 
-    .project-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px 20px;
-      max-width: 1000px;
-      margin: 0 auto 30px;
-    }
+  .project-card.tableau { background-color: #FAD6D6; }
+  .project-card.database { background-color: #fcf6d7; }
+  .project-card.warehouse { background-color: #efe3ff; }
+  .project-card.python { background-color: #F5F5DC; }
+  .project-card.mining { background-color: #F0F8FF; }
+  .project-card.experience-card { background-color: #FFF0F5; }
 
-    .project-card {
-      flex: 1 1 140px;
-      max-width: 160px;
-      padding: 15px;
-      border-radius: 12px;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--header-color);
+    border-top: 1px solid var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-    .project-card.tableau { background-color: #FAD6D6; }
-    .project-card.database { background-color: #fcf6d7; }
-    .project-card.warehouse { background-color: #efe3ff; }
-    .project-card.python { background-color: #F5F5DC; }
-    .project-card.mining { background-color: #F0F8FF; }
-    .project-card.experience-card { background-color: #FFF0F5; }
+  footer .social-links {
+    display: flex;
+    gap: 20px;
+  }
 
-    footer {
-      background: var(--header-color);
-      border-top: 1px solid var(--accent-color);
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
+  footer a {
+    color: #2F4F4F;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 
-    footer .social-links {
-      display: flex;
-      gap: 20px;
-    }
+  footer a:hover { color: var(--accent-color); }
 
-    footer a {
-      color: #2F4F4F;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
+  footer svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+  }
 
-    footer a:hover {
-      color: var(--accent-color);
-    }
-
-    footer svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
-
-    @media (max-width: 768px) {
-      .top-image img {
-        max-height: 220px;
-      }
-
-      .project-grid {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      footer {
-        position: static;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .top-image { height: 180px; }
+    .project-grid { flex-direction: column; }
+    footer { position: static; padding: 20px 10px; }
+    .hero { padding: 30px 15px 15px; }
+  }
   </style>
 </head>
+
 <body>
 
-  <nav>
-    <div class="nav-name">Amruta Gandhe</div>
-    <div class="nav-links-wrapper">
-      <ul>
-        <li>
-          <a href="index.html" aria-label="Home">
-            <svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="about.html" aria-label="About">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="experience.html" aria-label="Professional Experience">
-            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>
-            Professional Experience
-          </a>
-        </li>
-        <li>
-          <a href="projects.html" aria-label="Project Portfolio">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
-            Project Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="contact.html" aria-label="Contact">
-            <svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  </nav>
+<!-- ===== NAVBAR ===== -->
+<nav>
+  <div class="nav-name">Amruta Gandhe</div>
 
-  <!-- ===== TOP IMAGE ===== -->
-  <div class="top-image">
-    <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    ☰
+  </button>
+
+  <div class="nav-links-wrapper" id="nav-links">
+    <ul>
+      <li>
+        <a href="index.html" aria-label="Home">
+          <svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="about.html" aria-label="About">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>
+          About
+        </a>
+      </li>
+      <li>
+        <a href="experience.html" aria-label="Professional Experience">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3H8v4h8V3z"/></svg>
+          Professional Experience
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" aria-label="Project Portfolio">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          Project Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" aria-label="Contact">
+          <svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>
+          Contact
+        </a>
+      </li>
+    </ul>
   </div>
+</nav>
 
-  <div class="hero">
-    <p>Welcome to my Business Analytics portfolio.</p>
-  </div>
+<!-- ===== TOP IMAGE ===== -->
+<div class="top-image">
+  <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
+</div>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <p>Versatile Data & Analytics Professional with experience leading in data-driven initiatives across banking, healthcare, and supply chain sectors.</p>
-  </section>
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <p>Welcome to my Business Analytics portfolio.</p>
+</div>
+
+<!-- ===== PROFESSIONAL EXPERIENCE ===== -->
+<section id="experience">
+  <h2 style="text-align:center; color: #82c0cc; font-size: 2rem;">Professional Experience</h2>
+  <p style="text-align:center; font-size: 1rem; max-width:900px; margin: 0 auto 20px; line-height:1.5;">
+    Versatile Data & Analytics Professional with experience leading in data-driven initiatives across banking, healthcare, and supply chain sectors.
+    Adept at delivering actionable insights through data storytelling, SQL/Python scripting, and visualization tools like Tableau & Power BI.
+    Skilled in cloud platforms like Snowflake and experienced in cross-functional collaboration to build solutions that drive decision-making and operational efficiency.
+  </p>
 
   <div class="project-grid">
-    <a href="experience.html" class="project-card experience-card">View Full Experience</a>
+    <a href="experience.html" class="project-card experience-card" aria-label="View Full Experience">
+      View Full Experience
+    </a>
   </div>
+</section>
 
-  <section id="projects">
-    <h2 style="text-align:center; color:#82c0cc;">Explore My Projects</h2>
-    <div class="project-grid">
-      <a href="projects.html" class="project-card tableau">Tableau</a>
-      <a href="projects.html" class="project-card database">Database</a>
-      <a href="projects.html" class="project-card warehouse">Data Warehouse</a>
-      <a href="projects.html" class="project-card python">Python</a>
-      <a href="projects.html" class="project-card mining">Data Mining</a>
-    </div>
-  </section>
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <h2 style="text-align:center; color:#82c0cc; font-size: 2rem;">Explore My Projects</h2>
+  <div class="project-grid">
+    <a href="projects.html" class="project-card tableau" aria-label="Tableau Projects">Tableau</a>
+    <a href="projects.html" class="project-card database" aria-label="Database Management Projects">Database</a>
+    <a href="projects.html" class="project-card warehouse" aria-label="Data Warehouse Projects">Data Warehouse</a>
+    <a href="projects.html" class="project-card python" aria-label="Python Projects">Python</a>
+    <a href="projects.html" class="project-card mining" aria-label="Data Mining Projects">Data Mining</a>
+  </div>
+</section>
 
-  <footer>
-    <div class="social-links">
-      <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4z" />
-          <path d="M4 4l8 8 8-8" />
-        </svg>
-        <span>Email</span>
-      </a>
-      <a class="linkedin-icon" href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-    </div>
-    <div>© Amruta Gandhe</div>
-  </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="social-links">
+    <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" />
+        <path d="M4 4l8 8 8-8" />
+      </svg>
+      <span>Email</span>
+    </a>
+    <a class="linkedin-icon" href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3" />
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+  </div>
+  <div>© Amruta Gandhe</div>
+</footer>
 
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navWrapper = document.querySelector('.nav-links-wrapper');
+<!-- ===== SCRIPT ===== -->
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navWrapper = document.querySelector('.nav-links-wrapper');
 
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
-      navWrapper.classList.toggle('active');
-    });
-  </script>
+hamburger.addEventListener('click', () => {
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+  hamburger.setAttribute('aria-expanded', !expanded);
+  navWrapper.classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
