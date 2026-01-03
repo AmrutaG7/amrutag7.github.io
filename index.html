@@ -43,19 +43,14 @@
       font-weight: 700;
       font-size: 1.1rem;
       color: #2F4F4F;
-      width: 150px;
       user-select: none;
     }
 
     .nav-links-wrapper {
-      flex-grow: 1;
-      max-width: 700px;
       display: flex;
-      justify-content: center;
-    }
-
-    .nav-spacer {
-      width: 150px;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
     }
 
     nav ul {
@@ -63,7 +58,7 @@
       padding: 0;
       list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 25px;
     }
 
     nav li {
@@ -103,8 +98,6 @@
       border: none;
       color: var(--primary-color);
       cursor: pointer;
-      margin-left: auto;
-      padding: 10px;
     }
 
     /* ===== TOP IMAGE / BANNER ===== */
@@ -117,7 +110,7 @@
     .top-image img {
       width: 100%;
       height: auto;
-      max-height: 400px; /* limits height on desktop */
+      max-height: 400px; /* desktop height limit */
       display: block;
     }
 
@@ -214,7 +207,7 @@
         width: 100%;
         background-color: var(--header-footer-color);
         border-top: 1px solid var(--accent-color);
-        justify-content: flex-start;
+        gap: 10px;
       }
 
       .nav-links-wrapper.active {
@@ -229,9 +222,7 @@
 
       .hamburger { display: block; }
 
-      .nav-name, .nav-spacer { width: auto; }
-
-      .top-image img { max-height: 250px; } /* mobile banner height */
+      .top-image img { max-height: 250px; }
       .project-grid { flex-direction: column; }
       footer { position: static; }
     }
@@ -278,11 +269,9 @@
       </li>
     </ul>
   </div>
-
-  <div class="nav-spacer"></div>
 </nav>
 
-<!-- ===== TOP IMAGE ===== -->
+<!-- ===== TOP IMAGE / BANNER ===== -->
 <div class="top-image">
   <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
 </div>
