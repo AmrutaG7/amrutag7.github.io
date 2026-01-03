@@ -93,6 +93,7 @@
   .top-image img {
     width: 100%;
     height: auto;
+    max-height: 400px;  /* limits the banner height on desktop */
     display: block;
   }
 
@@ -150,8 +151,7 @@
 
   @media (max-width: 768px) {
     .top-image img {
-      height: auto;
-      max-height: 250px;
+      max-height: 250px;  /* smaller height on mobile */
     }
 
     .project-grid {
