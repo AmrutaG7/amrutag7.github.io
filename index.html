@@ -5,224 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home - Amruta Gandhe</title>
   <style>
-  :root {
-    --bg-color: #faf9f9;
-    --header-color: #AFEEEE;
-    --card-bg: #E0FFFF;
-    --primary-color: #333;
-    --accent-color: #AFEEEE;
-    --header-footer-color: #AFEEEE;
-  }
+    :root {
+      --bg-color: #faf9f9;
+      --header-color: #AFEEEE;
+      --card-bg: #E0FFFF;
+      --primary-color: #333;
+      --accent-color: #AFEEEE;
+      --header-footer-color: #AFEEEE;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    line-height: 1.6;
-    padding-bottom: 100px;
-    font-size: 16px;
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      line-height: 1.6;
+      padding-bottom: 100px;
+      font-size: 16px;
+    }
 
-  /* ===== NAVBAR ===== */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--header-color);
-    border-bottom: 1px solid var(--accent-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-  }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--header-color);
+      border-bottom: 1px solid var(--accent-color);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 
-  .nav-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #2F4F4F;
-    width: 150px;
-    user-select: none;
-  }
+    .nav-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2F4F4F;
+    }
 
-  .nav-links-wrapper {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-  }
+    .nav-links-wrapper {
+      display: flex;
+      justify-content: flex-end; /* icons on right */
+      flex-grow: 1;
+      gap: 25px;
+    }
 
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
+    .nav-links-wrapper ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
 
-  nav li {
-    display: flex;
-    align-items: center;
-  }
+    .nav-links-wrapper a {
+      text-decoration: none;
+      color: #2F4F4F;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-  nav a {
-    color: #2F4F4F;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+    .nav-links-wrapper a svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+    }
 
-  nav a:hover { color: #666; }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-  nav svg {
-    width: 20px;
-    height: 20px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.5;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
+    /* ===== TOP IMAGE ===== */
+    .top-image {
+      margin-top: 70px; /* below navbar */
+      width: 100%;
+      overflow: hidden;
+    }
 
-  .hamburger {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-  }
+    .top-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 400px; /* prevents image from being too tall */
+    }
 
-  /* ===== TOP IMAGE / BANNER ===== */
-  .top-image {
-    margin-top: 70px; /* below navbar */
-    width: 100%;
-    height: 300px; /* banner height desktop */
-    overflow: hidden;
-  }
+    /* ===== HERO ===== */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
-  .top-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
 
-  /* ===== HERO ===== */
-  .hero {
-    text-align: center;
-    padding: 40px 20px 20px;
-  }
+    /* ===== PROJECT GRID ===== */
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
 
-  .hero p {
-    font-size: 1.2rem;
-    margin: 0;
-  }
+    .project-card {
+      flex: 1 1 140px;
+      max-width: 160px;
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-  /* ===== PROJECT GRID ===== */
-  .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto 60px;
-  }
+    .project-card.tableau { background-color: #FAD6D6; }
+    .project-card.database { background-color: #fcf6d7; }
+    .project-card.warehouse { background-color: #efe3ff; }
+    .project-card.python { background-color: #F5F5DC; }
+    .project-card.mining { background-color: #F0F8FF; }
+    .project-card.experience-card { background-color: #FFF0F5; }
 
-  .project-card {
-    flex: 1 1 140px;
-    max-width: 160px;
-    padding: 20px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--header-color);
+      border-top: 1px solid var(--accent-color);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
 
-  .project-card:hover {
-    transform: translateY(-4px);
-  }
+    footer .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
 
-  .project-card.tableau { background-color: #FAD6D6; }
-  .project-card.database { background-color: #fcf6d7; }
-  .project-card.warehouse { background-color: #efe3ff; }
-  .project-card.python { background-color: #F5F5DC; }
-  .project-card.mining { background-color: #F0F8FF; }
-  .project-card.experience-card { background-color: #FFF0F5; }
+    footer a {
+      text-decoration: none;
+      color: #2F4F4F;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--header-color);
-    border-top: 1px solid var(--accent-color);
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+    footer a svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+    }
 
-  footer .social-links {
-    display: flex;
-    gap: 20px;
-  }
+    @media (max-width: 768px) {
+      .top-image img {
+        max-height: 220px;
+      }
 
-  footer a {
-    color: #2F4F4F;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+      .project-grid {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  footer a:hover { color: var(--accent-color); }
+      footer .social-links {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-  footer svg {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.5;
-  }
+      .nav-links-wrapper {
+        justify-content: flex-start;
+        flex-direction: column;
+        display: none;
+        background-color: var(--header-footer-color);
+        width: 100%;
+      }
 
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .top-image { height: 180px; }
-    .project-grid { flex-direction: column; }
-    footer { position: static; padding: 20px 10px; }
-    .hero { padding: 30px 15px 15px; }
-  }
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <nav>
   <div class="nav-name">Amruta Gandhe</div>
-
-  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-    ☰
-  </button>
+  <button class="hamburger" aria-label="Toggle navigation">☰</button>
 
   <div class="nav-links-wrapper" id="nav-links">
     <ul>
@@ -265,40 +256,34 @@
   <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
 </div>
 
-<!-- ===== HERO ===== -->
 <div class="hero">
   <p>Welcome to my Business Analytics portfolio.</p>
 </div>
 
-<!-- ===== PROFESSIONAL EXPERIENCE ===== -->
 <section id="experience">
-  <h2 style="text-align:center; color: #82c0cc; font-size: 2rem;">Professional Experience</h2>
-  <p style="text-align:center; font-size: 1rem; max-width:900px; margin: 0 auto 20px; line-height:1.5;">
+  <h2 style="text-align:center; color:#82c0cc;">Professional Experience</h2>
+  <p style="text-align:center; max-width:900px; margin:0 auto 20px;">
     Versatile Data & Analytics Professional with experience leading in data-driven initiatives across banking, healthcare, and supply chain sectors.
-    Adept at delivering actionable insights through data storytelling, SQL/Python scripting, and visualization tools like Tableau & Power BI.
-    Skilled in cloud platforms like Snowflake and experienced in cross-functional collaboration to build solutions that drive decision-making and operational efficiency.
   </p>
-
-  <div class="project-grid">
-    <a href="experience.html" class="project-card experience-card" aria-label="View Full Experience">
-      View Full Experience
-    </a>
-  </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
+<div class="project-grid">
+  <a href="experience.html" class="project-card experience-card">
+    View Full Experience
+  </a>
+</div>
+
 <section id="projects">
-  <h2 style="text-align:center; color:#82c0cc; font-size: 2rem;">Explore My Projects</h2>
+  <h2 style="text-align:center; color:#82c0cc;">Explore My Projects</h2>
   <div class="project-grid">
-    <a href="projects.html" class="project-card tableau" aria-label="Tableau Projects">Tableau</a>
-    <a href="projects.html" class="project-card database" aria-label="Database Management Projects">Database</a>
-    <a href="projects.html" class="project-card warehouse" aria-label="Data Warehouse Projects">Data Warehouse</a>
-    <a href="projects.html" class="project-card python" aria-label="Python Projects">Python</a>
-    <a href="projects.html" class="project-card mining" aria-label="Data Mining Projects">Data Mining</a>
+    <a href="projects.html" class="project-card tableau">Tableau</a>
+    <a href="projects.html" class="project-card database">Database Management</a>
+    <a href="projects.html" class="project-card warehouse">Data Warehouse</a>
+    <a href="projects.html" class="project-card python">Python</a>
+    <a href="projects.html" class="project-card mining">Data Mining</a>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="social-links">
     <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
@@ -319,16 +304,13 @@
   <div>© Amruta Gandhe</div>
 </footer>
 
-<!-- ===== SCRIPT ===== -->
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navWrapper = document.querySelector('.nav-links-wrapper');
+  const hamburger = document.querySelector('.hamburger');
+  const navWrapper = document.querySelector('.nav-links-wrapper');
 
-hamburger.addEventListener('click', () => {
-  const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-  hamburger.setAttribute('aria-expanded', !expanded);
-  navWrapper.classList.toggle('active');
-});
+  hamburger.addEventListener('click', () => {
+    navWrapper.classList.toggle('active');
+  });
 </script>
 
 </body>
