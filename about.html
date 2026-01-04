@@ -249,10 +249,9 @@
         padding: 10px;
       }
 
-      /* Mobile nav updated to match index.html behavior */
       .nav-links-wrapper {
-        display: none;              /* hidden by default */
-        flex-direction: column;     /* vertical menu */
+        display: none;
+        flex-direction: column;
         width: 100%;
         background-color: var(--nav-footer-bg);
         border-top: 1px solid var(--accent-color);
@@ -263,7 +262,7 @@
       }
 
       .nav-links-wrapper.active {
-        display: flex;              /* show menu when hamburger clicked */
+        display: flex;
       }
 
       nav {
@@ -274,12 +273,12 @@
 
       nav a {
         padding-left: 20px;
-        flex-direction: row;        /* horizontal icon + text like index.html */
+        flex-direction: row;
         justify-content: flex-start;
       }
 
       .hamburger {
-        display: block;             /* show hamburger on mobile */
+        display: block;
       }
 
       main {
@@ -408,15 +407,19 @@
     </ul>
   </section>
 
+  <!-- ===== Updated Certifications & Publications Section ===== -->
   <section class="certifications">
     <h2 class="section-title">🏅 Certifications & Publications</h2>
     <ul>
+      <!-- Udemy -->
       <li>
         <a href="https://www.udemy.com/certificate/UC-1b203a57-a868-466f-b565-4628824aa904/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
            target="_blank" rel="noopener" class="cert-link" title="View Udemy Certificate">
-           PL-300 certification prep: Microsoft Power BI Data Analyst
+           PL-300 Certification Prep: Microsoft Power BI Data Analyst
         </a>
       </li>
+
+      <!-- Databricks -->
       <li>
         <a href="https://credentials.databricks.com/c24d3b9f-66a4-40f9-a76f-9e5e8b9e08b7#acc.8FvcuRPe"
            target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
@@ -432,21 +435,27 @@
       <li>
         <a href="https://credentials.databricks.com/8f814bf2-0295-4ebc-b0d7-d2e10704703c#acc.6Ho7NlUq"
            target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-          Academy Accreditation: Generative AI Fundamentals (Databricks)
+           Academy Accreditation: Generative AI Fundamentals (Databricks)
         </a>
       </li>
+
+      <!-- AWS -->
       <li>
         <a href="https://www.credly.com/badges/4b54075b-1f0a-43e7-8772-66533c422703?source=linked_in_profile"
            target="_blank" rel="noopener" class="cert-link" title="View AWS Accreditation">
-          AWS Partner: Accreditation (Technical)
+           AWS Partner: Accreditation (Technical)
         </a>
       </li>
+
+      <!-- SAS -->
       <li>
         <a href="https://www.credly.com/badges/0baed007-e71a-438f-8f7a-1e00f6879427/linked_in_profile"
            target="_blank" rel="noopener" class="cert-link" title="View SAS Certification">
-          SAS Certified Base Programmer for SAS 9.0
+           SAS Certified Base Programmer for SAS 9.0
         </a>
       </li>
+
+      <!-- Publication -->
       <li>
         <a href="https://ieeexplore.ieee.org/abstract/document/10216390"
            target="_blank" rel="noopener" class="publication-link" title="View publication on IEEE Xplore">
@@ -460,7 +469,7 @@
       </li>
     </ul>
   </section>
-	
+
   <section class="projects">
     <h2 class="section-title">🗂️ Projects</h2>
     <p>Explore my work on the <a href="projects.html">Project Portfolio page</a>.</p>
@@ -476,30 +485,31 @@
 </main>
 
 <footer>
-  <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
+  <a href="mailto:asgandhe@hotmail.com">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="2" y="6" width="20" height="12" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 4h16v16H4z"/>
+      <path d="M4 4l8 8 8-8"/>
     </svg>
-    <span>Email</span>
+    asgandhe@hotmail.com
   </a>
-
-  <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83 0 53.4 0 23.3 24.55 0 53.79 0s53.79 23.3 53.79 53.4c0 29.6-24.09 54.7-53.79 54.7zM447.9 448h-92.7V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.8-55.7 76.9V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.5 42.5-48.3 87.5-48.3 93.6 0 110.8 61.6 110.8 141.7V448z"/>
+  <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M4 4h16v16H4z"/>
+      <path d="M6 9v6"/>
+      <path d="M9 9v6"/>
+      <path d="M12 9v6"/>
     </svg>
+    LinkedIn
   </a>
-  <div>© Amruta Gandhe</div>
 </footer>
 
 <script>
   const hamburger = document.querySelector('.hamburger');
-  const navWrapper = document.querySelector('.nav-links-wrapper');
+  const navLinksWrapper = document.getElementById('nav-links');
 
   hamburger.addEventListener('click', () => {
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-    hamburger.setAttribute('aria-expanded', !expanded);
-    navWrapper.classList.toggle('active');
+    navLinksWrapper.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', navLinksWrapper.classList.contains('active'));
   });
 </script>
 
