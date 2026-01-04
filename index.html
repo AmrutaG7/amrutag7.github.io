@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Home - Amruta Gandhe</title>
+
   <style>
     :root {
       --bg-color: #faf9f9;
@@ -25,6 +25,7 @@
       font-size: 16px;
     }
 
+    /* ===== NAV ===== */
     nav {
       position: fixed;
       top: 0;
@@ -135,6 +136,7 @@
       gap: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
+      color: #333;
     }
 
     .project-card.tableau { background-color: #FAD6D6; }
@@ -176,48 +178,10 @@
       stroke-width: 1.5;
     }
 
-    /* ===== MOBILE FIXED NAV ===== */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-
       .top-image img {
         max-height: 220px;
-      }
-
-      .nav-links-wrapper {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        background-color: var(--header-footer-color);
-        border-top: 1px solid var(--accent-color);
-        padding: 10px 0;
-      }
-
-      .nav-links-wrapper.active {
-        display: flex;
-      }
-
-      .nav-links-wrapper ul {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links-wrapper li {
-        width: 100%;
-      }
-
-      /* icon above text like about.html */
-      .nav-links-wrapper a {
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        padding: 6px 0;
-      }
-
-      .hamburger {
-        display: block;
       }
 
       .project-grid {
@@ -225,10 +189,21 @@
         align-items: center;
       }
 
-      footer .social-links {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+      .nav-links-wrapper {
+        justify-content: flex-start;
+        flex-direction: column;
+        display: none;
+        background-color: var(--header-footer-color);
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links-wrapper.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
       }
     }
   </style>
@@ -236,21 +211,69 @@
 
 <body>
 
+<!-- ===== NAVIGATION ===== -->
 <nav>
   <div class="nav-name">Amruta Gandhe</div>
-  <button class="hamburger" aria-label="Toggle navigation">☰</button>
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-  <div class="nav-links-wrapper">
+  <div class="nav-links-wrapper" id="nav-links">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">Professional Experience</a></li>
-      <li><a href="projects.html">Project Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="index.html">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 12L12 3l9 9"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M5.5 21c1.5-4 11.5-4 13 0"/>
+          </svg>
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="experience.html">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 3H8v4h8V3z"/>
+          </svg>
+          Professional Experience
+        </a>
+      </li>
+
+      <li>
+        <a href="projects.html">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          </svg>
+          Project Portfolio
+        </a>
+      </li>
+
+      <li>
+        <a href="contact.html">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/>
+            <path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/>
+          </svg>
+          Contact
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
 
+<!-- ===== TOP IMAGE ===== -->
 <div class="top-image">
   <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
 </div>
@@ -259,18 +282,20 @@
   <p>Welcome to my Business Analytics portfolio.</p>
 </div>
 
-<section id="experience">
+<section>
   <h2 style="text-align:center; color:#82c0cc;">Professional Experience</h2>
   <p style="text-align:center; max-width:900px; margin:0 auto 20px;">
-    Versatile Data Analytics Professional with experience across banking, healthcare, pharmaceutical, and consumer goods.
+    Versatile Data Analytics Professional with experience across banking, healthcare, pharmaceuticals, and consumer goods.
   </p>
 </section>
 
 <div class="project-grid">
-  <a href="experience.html" class="project-card experience-card">View Full Experience</a>
+  <a href="experience.html" class="project-card experience-card">
+    View Full Experience
+  </a>
 </div>
 
-<section id="projects">
+<section>
   <h2 style="text-align:center; color:#82c0cc;">Explore My Projects</h2>
   <div class="project-grid">
     <a href="projects.html" class="project-card tableau">Tableau</a>
@@ -283,8 +308,21 @@
 
 <footer>
   <div class="social-links">
-    <a href="mailto:asgandhe@hotmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank">LinkedIn</a>
+    <a href="mailto:asgandhe@hotmail.com">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z"/>
+        <path d="M4 4l8 8 8-8"/>
+      </svg>
+      Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <path d="M8 11v5M8 8v.01M12 11v5m0-3a2 2 0 0 1 4 0v3"/>
+      </svg>
+      LinkedIn
+    </a>
   </div>
   <div>© Amruta Gandhe</div>
 </footer>
@@ -294,6 +332,8 @@
   const navWrapper = document.querySelector('.nav-links-wrapper');
 
   hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
     navWrapper.classList.toggle('active');
   });
 </script>
