@@ -28,7 +28,6 @@
     }
 
     /* HEADER */
-
     header {
       background-color: var(--nav-footer-bg);
       border-bottom: 1px solid var(--accent-color);
@@ -52,7 +51,6 @@
       flex-shrink: 0;
     }
 
-    /* Nav container for centering on desktop */
     .nav-links-wrapper {
       flex-grow: 1;
       max-width: 900px;
@@ -91,9 +89,8 @@
       stroke-linejoin: round;
     }
 
-    /* Glow effect for yellow lightbulb icon */
     .glowing-icon {
-      color: #FFD700; /* bright yellow */
+      color: #FFD700;
       text-shadow: 
         0 0 5px #FFD700,  
         0 0 10px #FFA500, 
@@ -191,8 +188,6 @@
       color: var(--primary-color);
     }
 
-    /* FOOTER */
-
     footer {
       background-color: var(--nav-footer-bg);
       border-top: 1px solid var(--accent-color);
@@ -236,7 +231,7 @@
       color: #6c63ff;
     }
 
-    /* Hamburger menu button - hidden on desktop */
+    /* Hamburger menu button */
     .hamburger {
       display: none;
       font-size: 1.8rem;
@@ -248,17 +243,16 @@
       margin-left: auto;
     }
 
-    /* Responsive */
-
+    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
       header {
         padding: 10px;
       }
 
-      /* Hide nav links by default on mobile */
+      /* Mobile nav updated to match index.html behavior */
       .nav-links-wrapper {
-        display: none;
-        flex-direction: column;
+        display: none;              /* hidden by default */
+        flex-direction: column;     /* vertical menu */
         width: 100%;
         background-color: var(--nav-footer-bg);
         border-top: 1px solid var(--accent-color);
@@ -268,9 +262,8 @@
         margin-top: 8px;
       }
 
-      /* Show nav links when active */
       .nav-links-wrapper.active {
-        display: flex;
+        display: flex;              /* show menu when hamburger clicked */
       }
 
       nav {
@@ -281,11 +274,12 @@
 
       nav a {
         padding-left: 20px;
+        flex-direction: row;        /* horizontal icon + text like index.html */
+        justify-content: flex-start;
       }
 
-      /* Show hamburger */
       .hamburger {
-        display: block;
+        display: block;             /* show hamburger on mobile */
       }
 
       main {
@@ -301,35 +295,35 @@
       body {
         font-size: 15px;
       }
-    
-	.publication-link {
-      color: #006699;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
 
-    .publication-link:hover {
-      color: var(--accent-color);
-      text-decoration: underline;
-    }
+      .publication-link {
+        color: #006699;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
 
-    .publication-link .icon {
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-    }
+      .publication-link:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
+      }
 
-    .cert-link {
-      color: #0077cc;
-      text-decoration: none;
-    }
+      .publication-link .icon {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+      }
 
-    .cert-link:hover {
-      text-decoration: underline;
-    }
-   }	
+      .cert-link {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      .cert-link:hover {
+        text-decoration: underline;
+      }
+    }	
   </style>
 </head>
 <body>
@@ -398,7 +392,7 @@
       <br><br>
       This inspired me to pursue a Master’s in Business Analytics at the University of North Texas, USA. Since then, I’ve worked across banking, healthcare, and consumer goods, focusing on omni-channel marketing through campaign analytics, audience segmentation, and improving data workflows for business insights.
       <br><br> 
-	  Currently based in <strong>Toronto,Ontario,Canada</strong>, I enjoy working on data problems that combine analytical rigor with business context.
+      Currently based in <strong>Toronto,Ontario,Canada</strong>, I enjoy working on data problems that combine analytical rigor with business context.
     </p>
   </section>
 
@@ -414,67 +408,58 @@
     </ul>
   </section>
 
- <section class="certifications">
-  <h2 class="section-title">🏅 Certifications & Publications</h2>
-  <ul>
-	<section class="certifications">
-  <h2 class="section-title">🏅 Certifications & Publications</h2>
-  <ul>
-    <li>
-      <a href="https://www.udemy.com/certificate/UC-1b203a57-a868-466f-b565-4628824aa904/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
-         target="_blank" rel="noopener" class="cert-link" title="View Udemy Certificate">
-         PL-300 certification prep: Microsoft Power BI Data Analyst
-      </a>
-    </li>
-	  
-    <li>
-      <a href="https://credentials.databricks.com/c24d3b9f-66a4-40f9-a76f-9e5e8b9e08b7#acc.8FvcuRPe"
-         target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-         Databricks Certified Data Analyst Associate
-      </a>
-    </li>
-
-	  <li>
-      <a href="https://credentials.databricks.com/c363b0c5-866f-4d4c-bed1-072df3714af8#acc.BhxS9b0F"
-         target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-         Academy Accreditation: Databricks Fundamentals
-      </a>
-    </li>
-	    
-	<li>
-      <a href="https://credentials.databricks.com/8f814bf2-0295-4ebc-b0d7-d2e10704703c#acc.6Ho7NlUq"
-         target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-        Academy Accreditation: Generative AI Fundamentals (Databricks)
-      </a>
-    </li>
-
-	<li>
-      <a href="https://www.credly.com/badges/4b54075b-1f0a-43e7-8772-66533c422703?source=linked_in_profile"
-         target="_blank" rel="noopener" class="cert-link" title="View AWS Accreditation">
-        AWS Partner: Accreditation (Technical)
-      </a>
-    </li>
-	  
-    <li>
-      <a href="https://www.credly.com/badges/0baed007-e71a-438f-8f7a-1e00f6879427/linked_in_profile"
-         target="_blank" rel="noopener" class="cert-link" title="View SAS Certification">
-        SAS Certified Base Programmer for SAS 9.0
-      </a>
-    </li>
-
-    <li>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10216390"
-         target="_blank" rel="noopener" class="publication-link" title="View publication on IEEE Xplore">
-        <em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M14 3h7v7" />
-          <path d="M10 14L21 3" />
-          <path d="M5 5h14v14H5z" />
-        </svg>
-      </a>, Dec 2022
-    </li>
-  </ul>
-</section>
+  <section class="certifications">
+    <h2 class="section-title">🏅 Certifications & Publications</h2>
+    <ul>
+      <li>
+        <a href="https://www.udemy.com/certificate/UC-1b203a57-a868-466f-b565-4628824aa904/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
+           target="_blank" rel="noopener" class="cert-link" title="View Udemy Certificate">
+           PL-300 certification prep: Microsoft Power BI Data Analyst
+        </a>
+      </li>
+      <li>
+        <a href="https://credentials.databricks.com/c24d3b9f-66a4-40f9-a76f-9e5e8b9e08b7#acc.8FvcuRPe"
+           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
+           Databricks Certified Data Analyst Associate
+        </a>
+      </li>
+      <li>
+        <a href="https://credentials.databricks.com/c363b0c5-866f-4d4c-bed1-072df3714af8#acc.BhxS9b0F"
+           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
+           Academy Accreditation: Databricks Fundamentals
+        </a>
+      </li>
+      <li>
+        <a href="https://credentials.databricks.com/8f814bf2-0295-4ebc-b0d7-d2e10704703c#acc.6Ho7NlUq"
+           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
+          Academy Accreditation: Generative AI Fundamentals (Databricks)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/4b54075b-1f0a-43e7-8772-66533c422703?source=linked_in_profile"
+           target="_blank" rel="noopener" class="cert-link" title="View AWS Accreditation">
+          AWS Partner: Accreditation (Technical)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.credly.com/badges/0baed007-e71a-438f-8f7a-1e00f6879427/linked_in_profile"
+           target="_blank" rel="noopener" class="cert-link" title="View SAS Certification">
+          SAS Certified Base Programmer for SAS 9.0
+        </a>
+      </li>
+      <li>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10216390"
+           target="_blank" rel="noopener" class="publication-link" title="View publication on IEEE Xplore">
+          <em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14 3h7v7" />
+            <path d="M10 14L21 3" />
+            <path d="M5 5h14v14H5z" />
+          </svg>
+        </a>, Dec 2022
+      </li>
+    </ul>
+  </section>
 	
   <section class="projects">
     <h2 class="section-title">🗂️ Projects</h2>
