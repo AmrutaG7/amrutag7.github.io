@@ -58,7 +58,6 @@
       gap: 25px;
       margin: 0;
       padding: 0;
-      flex-direction: row;
     }
 
     .nav-links-wrapper a {
@@ -88,7 +87,7 @@
 
     /* ===== TOP IMAGE ===== */
     .top-image {
-      margin-top: 70px;
+      margin-top: 70px; /* below navbar */
       width: 100%;
       overflow: hidden;
     }
@@ -148,11 +147,6 @@
         max-height: 220px;
       }
 
-      .project-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
       footer {
         text-align: center;
       }
@@ -166,7 +160,7 @@
 
       .nav-links-wrapper {
         justify-content: flex-start;
-        flex-direction: column; /* vertical menu on mobile */
+        flex-direction: column;
         display: none;
         background-color: var(--header-footer-color);
         width: 100%;
@@ -210,12 +204,6 @@
         </a>
       </li>
       <li>
-        <a href="projects.html" aria-label="Project Portfolio">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
-          Project Portfolio
-        </a>
-      </li>
-      <li>
         <a href="contact.html" aria-label="Contact">
           <svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>
           Contact
@@ -234,9 +222,9 @@
   <p>Welcome to my Business Analytics portfolio.</p>
 </div>
 
-<!-- ===== WELCOME SECTION ===== -->
-<section style="text-align:center; max-width:900px; margin: 40px auto;">
-  <h2 style="color:#82c0cc;">Welcome</h2>
+<!-- ===== NEW WELCOME SECTION ===== -->
+<section style="max-width:900px; margin: 40px auto; text-align:center;">
+  <h2>Welcome</h2>
   <p>
     This portfolio highlights my professional experience, analytics projects,
     and data-driven work across banking and healthcare domains.
