@@ -25,7 +25,6 @@
       font-size: 16px;
     }
 
-    /* ===== NAVIGATION ===== */
     nav {
       position: fixed;
       top: 0;
@@ -38,20 +37,19 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      flex-wrap: wrap;
     }
 
     .nav-name {
       font-weight: 700;
       font-size: 1.1rem;
       color: #2F4F4F;
-      flex-shrink: 0;
     }
 
     .nav-links-wrapper {
       display: flex;
       justify-content: flex-end;
       flex-grow: 1;
+      gap: 25px;
     }
 
     .nav-links-wrapper ul {
@@ -85,7 +83,6 @@
       background: none;
       border: none;
       cursor: pointer;
-      color: #2F4F4F;
     }
 
     /* ===== TOP IMAGE ===== */
@@ -179,7 +176,7 @@
       stroke-width: 1.5;
     }
 
-    /* ===== MOBILE (MATCH about.html) ===== */
+    /* ===== MOBILE FIXED NAV ===== */
     @media (max-width: 768px) {
 
       .top-image img {
@@ -187,12 +184,15 @@
       }
 
       .nav-links-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         display: none;
-        width: 100%;
         flex-direction: column;
         background-color: var(--header-footer-color);
         border-top: 1px solid var(--accent-color);
-        margin-top: 10px;
+        padding: 10px 0;
       }
 
       .nav-links-wrapper.active {
@@ -201,20 +201,19 @@
 
       .nav-links-wrapper ul {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
+        gap: 12px;
       }
 
       .nav-links-wrapper li {
         width: 100%;
       }
 
-      /* ICON ABOVE TEXT */
+      /* icon above text like about.html */
       .nav-links-wrapper a {
         flex-direction: column;
         align-items: center;
         gap: 4px;
-        padding: 8px 0;
+        padding: 6px 0;
       }
 
       .hamburger {
@@ -224,10 +223,6 @@
       .project-grid {
         flex-direction: column;
         align-items: center;
-      }
-
-      footer {
-        text-align: center;
       }
 
       footer .social-links {
@@ -243,33 +238,62 @@
 
 <nav>
   <div class="nav-name">Amruta Gandhe</div>
-  <button class="hamburger"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="nav-links">
-    ☰
-  </button>
+  <button class="hamburger" aria-label="Toggle navigation">☰</button>
 
-  <div class="nav-links-wrapper" id="nav-links">
+  <div class="nav-links-wrapper">
     <ul>
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/></svg>Home</a></li>
-      <li><a href="about.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21c1.5-4 11.5-4 13 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8v4h8z"/></svg>Professional Experience</a></li>
-      <li><a href="projects.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Project Portfolio</a></li>
-      <li><a href="contact.html"><svg viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/><path d="M3 10.5V18a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.5l-9 5-9-5z"/></svg>Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Professional Experience</a></li>
+      <li><a href="projects.html">Project Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- CONTENT REMAINS UNCHANGED -->
+<div class="top-image">
+  <img src="assets/home-banner.jpg" alt="Business Analytics Banner">
+</div>
+
+<div class="hero">
+  <p>Welcome to my Business Analytics portfolio.</p>
+</div>
+
+<section id="experience">
+  <h2 style="text-align:center; color:#82c0cc;">Professional Experience</h2>
+  <p style="text-align:center; max-width:900px; margin:0 auto 20px;">
+    Versatile Data Analytics Professional with experience across banking, healthcare, pharmaceutical, and consumer goods.
+  </p>
+</section>
+
+<div class="project-grid">
+  <a href="experience.html" class="project-card experience-card">View Full Experience</a>
+</div>
+
+<section id="projects">
+  <h2 style="text-align:center; color:#82c0cc;">Explore My Projects</h2>
+  <div class="project-grid">
+    <a href="projects.html" class="project-card tableau">Tableau</a>
+    <a href="projects.html" class="project-card database">Database Management</a>
+    <a href="projects.html" class="project-card warehouse">Data Warehouse</a>
+    <a href="projects.html" class="project-card python">Python</a>
+    <a href="projects.html" class="project-card mining">Data Mining</a>
+  </div>
+</section>
+
+<footer>
+  <div class="social-links">
+    <a href="mailto:asgandhe@hotmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank">LinkedIn</a>
+  </div>
+  <div>© Amruta Gandhe</div>
+</footer>
 
 <script>
   const hamburger = document.querySelector('.hamburger');
   const navWrapper = document.querySelector('.nav-links-wrapper');
 
   hamburger.addEventListener('click', () => {
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !expanded);
     navWrapper.classList.toggle('active');
   });
 </script>
