@@ -91,22 +91,22 @@
 
     .glowing-icon {
       color: #FFD700;
-      text-shadow: 
-        0 0 5px #FFD700,  
-        0 0 10px #FFA500, 
+      text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFA500,
         0 0 15px #FFD700;
       animation: glowPulse 1.5s ease-in-out infinite alternate;
     }
 
     @keyframes glowPulse {
       from {
-        text-shadow: 
+        text-shadow:
           0 0 3px #FFD700,
           0 0 6px #FFA500,
           0 0 12px #FFD700;
       }
       to {
-        text-shadow: 
+        text-shadow:
           0 0 8px #FFD700,
           0 0 14px #FFA500,
           0 0 20px #FFD700;
@@ -155,8 +155,8 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
       padding: 24px;
       margin-bottom: 30px;
-      border-left: 4px solid #AFEEEE; 
-      padding-left: 28px; 
+      border-left: 4px solid #AFEEEE;
+      padding-left: 28px;
     }
 
     ul {
@@ -321,19 +321,26 @@
       .cert-link:hover {
         text-decoration: underline;
       }
-    }	
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="header-name">Amruta Gandhe</div>
-  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+
+  <button
+    class="hamburger"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+    aria-controls="nav-links">
     ☰
   </button>
 
   <div class="nav-links-wrapper" id="nav-links">
     <nav>
+
       <a href="index.html" aria-label="Home">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 12L12 3l9 9"/>
@@ -341,6 +348,7 @@
         </svg>
         Home
       </a>
+
       <a href="about.html" aria-label="About">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="7" r="4"/>
@@ -348,6 +356,7 @@
         </svg>
         About
       </a>
+
       <a href="experience.html" aria-label="Professional Experience">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
@@ -355,6 +364,7 @@
         </svg>
         Professional Experience
       </a>
+
       <a href="projects.html" aria-label="Project Portfolio">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <rect x="3" y="3" width="7" height="7" rx="1.5"/>
@@ -364,6 +374,7 @@
         </svg>
         Project Portfolio
       </a>
+
       <a href="contact.html" aria-label="Contact">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v4.5"/>
@@ -371,155 +382,266 @@
         </svg>
         Contact
       </a>
+
     </nav>
   </div>
 </header>
 
 <main>
+
   <img src="assets/profile.jpg" alt="Amruta Gandhe" class="profile-pic" />
+
   <h1 class="hero">
     <i class="fas fa-lightbulb glowing-icon"></i> Amruta Gandhe
   </h1>
+
   <p style="text-align: center; color: #82c0cc;">
-  <strong>Business & Data Analytics | Customer & Product Analytics | Business Analysis | Decision Science | Project Delivery</strong>
+    <strong>
+      Business & Data Analytics | Customer & Product Analytics | Business Analysis | Decision Science | Project Delivery
+    </strong>
   </p>
+
   <section class="bio">
     <h2 class="section-title">👩‍💻 About Me</h2>
-  <p>
-    <strong>My Journey Into Data Analytics</strong><br><br>
-    
-	My professional journey spans business, analytics, healthcare, pharmaceuticals, consumer goods, and financial services, supported by a multidisciplinary educational background in pharmacy, management, and business analytics.
-    <br><br>
 
-    I have worked across banking, healthcare, pharmaceuticals, and consumer goods, with experience spanning customer and marketing analytics, business analysis, reporting, data quality and validation, analytics data products, process improvement, and cross-functional delivery. My recent experience has focused particularly on customer and campaign analytics, audience segmentation, reporting, business requirements, and analytics initiatives supporting banking and healthcare organizations.
-    <br><br>
+    <p>
+      <strong>My Journey Into Data Analytics</strong><br><br>
 
-    I enjoy working at the intersection of business, data, and technology, understanding business problems, translating them into analytical requirements, analyzing data, defining meaningful measures, and collaborating with business and technical stakeholders to deliver practical, data-informed solutions.
-    <br><br>
-	
-	Currently based in <strong>Oakville, Ontario, Canada</strong>.<br>
-    <strong>Canadian Permanent Resident.</strong>
-  </p>
+      My professional journey spans business, analytics, healthcare, pharmaceuticals, consumer goods, and financial services, supported by a multidisciplinary educational background in pharmacy, management, and business analytics.
+      <br><br>
+
+      I have worked across banking, healthcare, pharmaceuticals, and consumer goods, with experience spanning customer and marketing analytics, business analysis, reporting, data quality and validation, analytics data products, process improvement, and cross-functional delivery. My recent experience has focused particularly on customer and campaign analytics, audience segmentation, reporting, business requirements, and analytics initiatives supporting banking and healthcare organizations.
+      <br><br>
+
+      I enjoy working at the intersection of business, data, and technology, understanding business problems, translating them into analytical requirements, analyzing data, defining meaningful measures, and collaborating with business and technical stakeholders to deliver practical, data-informed solutions.
+      <br><br>
+
+      Currently based in <strong>Oakville, Ontario, Canada</strong>.<br>
+      <strong>Canadian Permanent Resident.</strong>
+    </p>
   </section>
 
   <section class="skills">
     <h2 class="section-title">🛠️ Technical Skills</h2>
+
     <ul>
-      <li><strong>Languages & Tools:</strong> SQL, Python (for Data science), SAS, MySQL Workbench, Jupyter, VS Code</li>
-      <li><strong>BI & Analytics:</strong> Tableau, Power BI, QlikView, SAS Enterprise Miner, Mixpanel, Freshpaint</li>
-      <li><strong>Cloud & Databases:</strong> Snowflake, AWS (S3, Athena), Azure ML Studio, Oracle APEX</li>
-      <li><strong>Project Management:</strong> Azure DevOps, JIRA</li>
-      <li><strong>Other:</strong> Open CDISC Validator, MS Office</li>
-      <li><strong>OS:</strong> Windows, Linux</li>
+      <li>
+        <strong>Languages & Tools:</strong>
+        SQL, Python, SAS, MySQL Workbench, Jupyter, VS Code
+      </li>
+
+      <li>
+        <strong>BI & Analytics:</strong>
+        Tableau, Power BI, QlikView, SAS Enterprise Miner, Mixpanel, Freshpaint
+      </li>
+
+      <li>
+        <strong>Cloud & Databases:</strong>
+        Snowflake, AWS (S3, Athena), Azure ML Studio, Oracle APEX
+      </li>
+
+      <li>
+        <strong>Delivery & Collaboration:</strong>
+        JIRA, Azure DevOps
+      </li>
+
+      <li>
+        <strong>Other:</strong>
+        Open CDISC Validator, MS Office
+      </li>
     </ul>
   </section>
 
   <section class="certifications">
     <h2 class="section-title">🏅 Certifications</h2>
+
     <ul>
+
       <li>
-        <a href="https://learn.microsoft.com/en-us/users/amrutagandhe-1366/credentials/de5fa39affd2073e?ref=https%3A%2F%2Fwww.linkedin.com%2F"
-           target="_blank" rel="noopener" class="cert-link" title="View Microsoft AI 900 Accreditation">
-           Microsoft Certified: Azure AI Fundamentals
-        </a>
-      </li>
-     
-      <li>
-        <a href="https://www.udemy.com/certificate/UC-1b203a57-a868-466f-b565-4628824aa904/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
-           target="_blank" rel="noopener" class="cert-link" title="View Udemy Certificate">
-           PL-300 Certification Prep: Microsoft Power BI Data Analyst
+        <a
+          href="https://learn.microsoft.com/en-us/users/amrutagandhe-1366/credentials/de5fa39affd2073e?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View Microsoft AI 900 Accreditation">
+          Microsoft Certified: Azure AI Fundamentals
         </a>
       </li>
 
       <li>
-        <a href="https://credentials.databricks.com/c24d3b9f-66a4-40f9-a76f-9e5e8b9e08b7#acc.8FvcuRPe"
-           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-           Databricks Certified Data Analyst Associate
-        </a>
-      </li>
-      <li>
-        <a href="https://credentials.databricks.com/c363b0c5-866f-4d4c-bed1-072df3714af8#acc.BhxS9b0F"
-           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-           Academy Accreditation: Databricks Fundamentals
-        </a>
-      </li>
-      <li>
-        <a href="https://credentials.databricks.com/8f814bf2-0295-4ebc-b0d7-d2e10704703c#acc.6Ho7NlUq"
-           target="_blank" rel="noopener" class="cert-link" title="View Databricks Accreditation">
-           Academy Accreditation: Generative AI Fundamentals (Databricks)
+        <a
+          href="https://www.udemy.com/certificate/UC-1b203a57-a868-466f-b565-4628824aa904/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View Udemy Certificate">
+          PL-300 Certification Prep: Microsoft Power BI Data Analyst
         </a>
       </li>
 
       <li>
-        <a href="https://www.credly.com/badges/4b54075b-1f0a-43e7-8772-66533c422703?source=linked_in_profile"
-           target="_blank" rel="noopener" class="cert-link" title="View AWS Accreditation">
-           AWS Partner: Accreditation (Technical)
+        <a
+          href="https://credentials.databricks.com/c24d3b9f-66a4-40f9-a76f-9e5e8b9e08b7#acc.8FvcuRPe"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View Databricks Accreditation">
+          Databricks Certified Data Analyst Associate
         </a>
       </li>
 
       <li>
-        <a href="https://www.credly.com/badges/0baed007-e71a-438f-8f7a-1e00f6879427/linked_in_profile"
-           target="_blank" rel="noopener" class="cert-link" title="View SAS Certification">
-           SAS Certified Base Programmer for SAS 9.0
+        <a
+          href="https://credentials.databricks.com/c363b0c5-866f-4d4c-bed1-072df3714af8#acc.BhxS9b0F"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View Databricks Accreditation">
+          Academy Accreditation: Databricks Fundamentals
         </a>
       </li>
-	  
+
+      <li>
+        <a
+          href="https://credentials.databricks.com/8f814bf2-0295-4ebc-b0d7-d2e10704703c#acc.6Ho7NlUq"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View Databricks Accreditation">
+          Academy Accreditation: Generative AI Fundamentals (Databricks)
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.credly.com/badges/4b54075b-1f0a-43e7-8772-66533c422703?source=linked_in_profile"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View AWS Accreditation">
+          AWS Partner: Accreditation (Technical)
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.credly.com/badges/0baed007-e71a-438f-8f7a-1e00f6879427/linked_in_profile"
+          target="_blank"
+          rel="noopener"
+          class="cert-link"
+          title="View SAS Certification">
+          SAS Certified Base Programmer for SAS 9.0
+        </a>
+      </li>
+
+    </ul>
+  </section>
+
   <section class="publications">
     <h2 class="section-title">📄 Publication</h2>
+
     <ul>
-     <li>
-      <a href="https://ieeexplore.ieee.org/abstract/document/10216390"
-         target="_blank"
-         rel="noopener"
-         class="publication-link"
-         title="View publication on IEEE Xplore">
-        <em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>
-        <svg xmlns="http://www.w3.org/2000/svg"
-             class="icon"
-             width="16"
-             height="16"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             viewBox="0 0 24 24">
-          <path d="M14 3h7v7" />
-          <path d="M10 14L21 3" />
-          <path d="M5 5h14v14H5z" />
-        </svg>
-      </a>, Dec 2022
-     </li>
+      <li>
+        <a
+          href="https://ieeexplore.ieee.org/abstract/document/10216390"
+          target="_blank"
+          rel="noopener"
+          class="publication-link"
+          title="View publication on IEEE Xplore">
+
+          <em>Artificial Intelligence Role in Chronic Condition Decision Extrapolation</em>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24">
+
+            <path d="M14 3h7v7" />
+            <path d="M10 14L21 3" />
+            <path d="M5 5h14v14H5z" />
+          </svg>
+
+        </a>, Dec 2022
+      </li>
     </ul>
   </section>
 
   <section class="projects">
     <h2 class="section-title">🗂️ Projects</h2>
-    <p>Explore my work on the <a href="projects.html">Project Portfolio page</a>.</p>
+    <p>
+      Explore my work on the
+      <a href="projects.html">Project Portfolio page</a>.
+    </p>
   </section>
 
   <section class="connect">
     <h2 class="section-title">📫 Connect</h2>
+
     <ul>
-      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank">LinkedIn</a></li>
-      <li><i class="fab fa-github"></i> <a href="https://github.com/amrutag7" target="_blank">GitHub</a></li>
+      <li>
+        <i class="fab fa-linkedin"></i>
+        <a
+          href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/"
+          target="_blank">
+          LinkedIn
+        </a>
+      </li>
+
+      <li>
+        <i class="fab fa-github"></i>
+        <a
+          href="https://github.com/amrutag7"
+          target="_blank">
+          GitHub
+        </a>
+      </li>
     </ul>
   </section>
+
 </main>
 
 <footer>
+
   <a href="mailto:asgandhe@hotmail.com" aria-label="Send email">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="2" y="6" width="20" height="12" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <polyline
+        points="22,6 12,13 2,6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"/>
+      <rect
+        x="2"
+        y="6"
+        width="20"
+        height="12"
+        rx="2"
+        ry="2"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"/>
     </svg>
+
     <span>Email</span>
   </a>
 
-  <a href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/" target="_blank" aria-label="LinkedIn">
+  <a
+    href="https://www.linkedin.com/in/amruta-gandhe-1b1013207/"
+    target="_blank"
+    aria-label="LinkedIn">
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
       <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83 0 53.4 0 23.3 24.55 0 53.79 0s53.79 23.3 53.79 53.4c0 29.6-24.09 54.7-53.79 54.7zM447.9 448h-92.7V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.8-55.7 76.9V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.5 42.5-48.3 87.5-48.3 93.6 0 110.8 61.6 110.8 141.7V448z"/>
     </svg>
+
   </a>
+
   <div>© Amruta Gandhe</div>
+
 </footer>
 
 <script>
@@ -528,7 +650,11 @@
 
   hamburger.addEventListener('click', () => {
     navLinksWrapper.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', navLinksWrapper.classList.contains('active'));
+
+    hamburger.setAttribute(
+      'aria-expanded',
+      navLinksWrapper.classList.contains('active')
+    );
   });
 </script>
 
